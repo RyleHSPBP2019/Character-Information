@@ -27,20 +27,21 @@ public class AppletRunner extends Applet implements ActionListener{
 		racePage.setSize(400,400);
 		f.setLayout(null);
 		racePage.setVisible(true);*/
-		turnOnFrame(homeFrame);
-		turnOnFrame(raceFrame);
-		turnOnFrame(classFrame);
-		turnOnFrame(backgroundFrame);
+		turnOnFrame(homeFrame, 1, 3);
+		turnOnFrame(raceFrame, 1, 1);
+		turnOnFrame(classFrame, 1, 1);
+		turnOnFrame(backgroundFrame, 1, 1);
 		
 		
 		 }
 	public void actionPerformed(ActionEvent arg0) {
 		homeFrame.setVisible(false);
-		races.setVisible(true);
+		raceFrame.setVisible(true);
 	}
-	public void turnOnFrame(Frame f) {
-		f.setLayout(null);
+	public void turnOnFrame(Frame f, int x, int y) {
+		f.setLayout(new GridLayout(x, y));
 		f.setSize(1000, 1000);
 		f.setVisible(true);
 	}
+	
 }

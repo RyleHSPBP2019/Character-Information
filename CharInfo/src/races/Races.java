@@ -17,8 +17,8 @@ public class Races {
 			align = "Generally Chaotic Evil";
 		}
 	}
-	public String getAge() {
+	/*public String getAge() {
 		return age;
-	}
+	}*/
 }
 
