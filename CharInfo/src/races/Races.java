@@ -7,7 +7,9 @@ public class Races {
 		String asi= new String();
 		String age = new String();
 		String align = new String();
+		String speed = new String();
 		String extra = new String();
+		
 		
 		
 		switch (raceType) {
@@ -15,6 +17,9 @@ public class Races {
 			asi = "Strengh + 1 and Charisma + 2";
 			age = "15-150";
 			align = "Generally Chaotic Evil";
+			speed = "30ft";
+			extra = "Cold Damage (Fires in a 15ft cone, con. save)";
+			
 		}
 	}
 	public String getAge() {
