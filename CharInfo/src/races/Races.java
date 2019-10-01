@@ -19,6 +19,8 @@ public class Races {
 			align = "Generally Chaotic Evil";
 			speed = "30ft";
 			extra = "Cold Damage (Fires in a 15ft cone, con. save)";
+			extra = "Cold Damage (Fires in a 15ft cone, con. save)";
+			extra = "Cold Damage (Fires in a 15ft cone, con. save)";
 			
 		}
 	}
