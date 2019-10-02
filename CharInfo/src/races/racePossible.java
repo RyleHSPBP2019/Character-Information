@@ -1,6 +1,10 @@
 package races;
 
 public enum racePossible {
-	whitedragonborn,
+	dragonborn,
 	
+}
+public enum colorPossible {
+	white,
+	silver,
 }
