@@ -27,6 +27,7 @@ public class Races {
 			age = "15-150";
 			align = "Generally Chaotic Evil";
 			speed = "30ft";
+			languages = "You can speak"
 			switch(colorType) {
 			case white:
 			case silver:
