@@ -1,14 +1,15 @@
 package main;
 
+import java.applet.Applet;
+import java.awt.Button;
 import java.awt.Frame;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import races.Races;
-
-import java.applet.Applet;
-import java.awt.Button;
-import java.awt.GridLayout;
+import races.racePossible;
+import races.subPossible;
 
 public class AppletRunner extends Applet implements ActionListener{
 	//General Initialization
@@ -20,28 +21,31 @@ public class AppletRunner extends Applet implements ActionListener{
 	Button classButton = new Button("Classes");
 	Button backgroundButton = new Button("Backgrounds");
 	//Race Buttons
-	Button dragonborn = new Button("Dragonborn");
-	Button dwarf = new Button("Dwarf");
-	Button elf = new Button("Elf");
-	Button gnome = new Button("Gnome");
-	Button halfElf = new Button("Half-Elf");
-	Button halfling = new Button("Halfling");
-	Button halfOrc = new Button("Half-Orc");
-	Button human = new Button("Human");
-	Button tiefling = new Button("Tiefling");
+	Button dragonbornB = new Button("Dragonborn");
+	Button dwarfB = new Button("Dwarf");
+	Button elfB = new Button("Elf");
+	Button gnomeB = new Button("Gnome");
+	Button halfElfB = new Button("Half-Elf");
+	Button halflingB = new Button("Halfling");
+	Button halfOrcB = new Button("Half-Orc");
+	Button humanB = new Button("Human");
+	Button tieflingB = new Button("Tiefling");
 	//Race Stuff
 	Races race = new Races();
 	//Dragon Color Buttons
-	Button black = new Button("Black Dragonborn");
- 	Button blue = new Button("Blue Dragonborn");
- 	Button brass = new Button("Brass Dragonborn");
- 	Button bronze = new Button("Bronze Dragonborn");
- 	Button copper = new Button("Copper Dragonborn");
- 	Button gold = new Button("Gold Dragonborn");
- 	Button green = new Button("Green Dragonborn");
- 	Button red = new Button("Red Dragonborn");
- 	Button silver = new Button("Silver Dragonborn");
- 	Button white = new Button("White Dragonborn");
+	Button blackD = new Button("Black Dragonborn");
+ 	Button blueD = new Button("Blue Dragonborn");
+ 	Button brassD = new Button("Brass Dragonborn");
+ 	Button bronzeD = new Button("Bronze Dragonborn");
+ 	Button copperD = new Button("Copper Dragonborn");
+ 	Button goldD = new Button("Gold Dragonborn");
+ 	Button greenD = new Button("Green Dragonborn");
+ 	Button redD = new Button("Red Dragonborn");
+ 	Button silverD = new Button("Silver Dragonborn");
+ 	Button whiteD = new Button("White Dragonborn");
+ 	//Dwarf Buttons
+ 	Button mountD = new Button("Mountain Dwarf");
+ 	Button hillD = new Button("Hill Dwarf");
 	public AppletRunner() {
 		setFrame(homeFrame, 1, 3, true);
 		setFrame(raceFrame, 3, 3, false);
@@ -54,24 +58,24 @@ public class AppletRunner extends Applet implements ActionListener{
 		homeFrame.add(backgroundButton);
 		backgroundButton.addActionListener(this);
 		
-		raceFrame.add(dragonborn);
-		dragonborn.addActionListener(this);
-		raceFrame.add(dwarf);
-		dwarf.addActionListener(this);
-		raceFrame.add(elf);
-		elf.addActionListener(this);
-		raceFrame.add(gnome);
-		gnome.addActionListener(this);
-		raceFrame.add(halfElf);
-		halfElf.addActionListener(this);
-		raceFrame.add(halfling);
-		halfling.addActionListener(this);
-		raceFrame.add(halfOrc);
-		halfOrc.addActionListener(this);
-		raceFrame.add(human);
-		human.addActionListener(this);
-		raceFrame.add(tiefling);
-		tiefling.addActionListener(this);
+		raceFrame.add(dragonbornB);
+		dragonbornB.addActionListener(this);
+		raceFrame.add(dwarfB);
+		dwarfB.addActionListener(this);
+		raceFrame.add(elfB);
+		elfB.addActionListener(this);
+		raceFrame.add(gnomeB);
+		gnomeB.addActionListener(this);
+		raceFrame.add(halfElfB);
+		halfElfB.addActionListener(this);
+		raceFrame.add(halflingB);
+		halflingB.addActionListener(this);
+		raceFrame.add(halfOrcB);
+		halfOrcB.addActionListener(this);
+		raceFrame.add(humanB);
+		humanB.addActionListener(this);
+		raceFrame.add(tieflingB);
+		tieflingB.addActionListener(this);
 		 }
 	public void setFrame(Frame f, int x, int y, boolean onOff) {
 		f.setLayout(new GridLayout(x, y));
@@ -95,37 +99,94 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 	homeFrame.setVisible(false);
 	    	 	backgroundFrame.setVisible(true);
 	         }
-	     else if (evt.getSource()==dragonborn)
+	     //Dragonborn Selection
+	     else if (evt.getSource()==dragonbornB)
          {
     	 	Frame dragonFrame = new Frame("Dragonborn Colors");
     	 	raceFrame.setVisible(false);
     	 	setFrame(dragonFrame, 2, 5, true);
     	 	
-    	 	dragonFrame.add(black);
-    	 	black.addActionListener(this);
-    	 	dragonFrame.add(blue);
-    	 	blue.addActionListener(this);
-    	 	dragonFrame.add(brass);
-    	 	brass.addActionListener(this);
-    	 	dragonFrame.add(bronze);
-    	 	bronze.addActionListener(this);
-    	 	dragonFrame.add(copper);
-    	 	copper.addActionListener(this);
-    	 	dragonFrame.add(gold);
-    	 	gold.addActionListener(this);
-    	 	dragonFrame.add(green);
-    	 	green.addActionListener(this);
-    	 	dragonFrame.add(red);
-    	 	red.addActionListener(this);
-    	 	dragonFrame.add(silver);
-    	 	silver.addActionListener(this);
-    	 	dragonFrame.add(white);
-    	 	white.addActionListener(this);
+    	 	dragonFrame.add(blackD);
+    	 	blackD.addActionListener(this);
+    	 	dragonFrame.add(blueD);
+    	 	blueD.addActionListener(this);
+    	 	dragonFrame.add(brassD);
+    	 	brassD.addActionListener(this);
+    	 	dragonFrame.add(bronzeD);
+    	 	bronzeD.addActionListener(this);
+    	 	dragonFrame.add(copperD);
+    	 	copperD.addActionListener(this);
+    	 	dragonFrame.add(goldD);
+    	 	goldD.addActionListener(this);
+    	 	dragonFrame.add(greenD);
+    	 	greenD.addActionListener(this);
+    	 	dragonFrame.add(redD);
+    	 	redD.addActionListener(this);
+    	 	dragonFrame.add(silverD);
+    	 	silverD.addActionListener(this);
+    	 	dragonFrame.add(whiteD);
+    	 	whiteD.addActionListener(this);
          }
-	     else if (evt.getSource()==black)
+	     else if (evt.getSource()==blackD)
          {
-    	 	race.setRaces()
+    	 	race.setRaces(racePossible.dragonborn, subPossible.black);
          }
+	     else if (evt.getSource()==blueD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.blue);
+         }
+	     else if (evt.getSource()==brassD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.brass);
+         }
+	     else if (evt.getSource()==bronzeD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.bronze);
+         }
+	     else if (evt.getSource()==copperD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.copper);
+         }
+	     else if (evt.getSource()==goldD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.gold);
+         }
+	     else if (evt.getSource()==greenD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.green);
+         }
+	     else if (evt.getSource()==redD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.red);
+         }
+	     else if (evt.getSource()==silverD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.silver);
+         }
+	     else if (evt.getSource()==whiteD)
+         {
+    	 	race.setRaces(racePossible.dragonborn, subPossible.white);
+         }
+	     //Dwarf Selection
+	     else if (evt.getSource()==dwarfB)
+         {
+    	 	Frame dwarfFrame = new Frame("Dwarf Subrace");
+    	 	raceFrame.setVisible(false);
+    	 	setFrame(dwarfFrame, 1, 2, true);
+    	 	
+    	 	dwarfFrame.add(mountD);
+    	 	mountD.addActionListener(this);
+    	 	dwarfFrame.add(hillD);
+    	 	hillD.addActionListener(this);
+         }
+	     else if (evt.getSource() == mountD)
+	     {
+	    	 race.setRaces(racePossible.dwarf, subPossible.mountain);
+	     }
+	     else if (evt.getSource() == hillD)
+	     {
+	    	 race.setRaces(racePossible.dwarf, subPossible.hill);
+	     }
 	}
 	
 }
