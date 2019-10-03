@@ -1,9 +1,7 @@
 package main;
 
 import java.applet.Applet;
-import java.awt.Button;
-import java.awt.Frame;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -59,6 +57,8 @@ public class AppletRunner extends Applet implements ActionListener{
  	//Halfling Buttons
  	Button stoutH = new Button("Stout Halfling");
  	Button lightH  = new Button("Lightfoot Halfling");
+ 	
+ 	//Classes Buttons
 	public AppletRunner() {
 		setFrame(homeFrame, 1, 3, true);
 		setFrame(raceFrame, 3, 3, false);
@@ -139,46 +139,56 @@ public class AppletRunner extends Applet implements ActionListener{
     	 	silverD.addActionListener(this);
     	 	dragonFrame.add(whiteD);
     	 	whiteD.addActionListener(this);
-         }
-	     else if (evt.getSource()==blackD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.black);
-         }
-	     else if (evt.getSource()==blueD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.blue);
-         }
-	     else if (evt.getSource()==brassD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.brass);
-         }
-	     else if (evt.getSource()==bronzeD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.bronze);
-         }
-	     else if (evt.getSource()==copperD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.copper);
-         }
-	     else if (evt.getSource()==goldD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.gold);
-         }
-	     else if (evt.getSource()==greenD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.green);
-         }
-	     else if (evt.getSource()==redD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.red);
-         }
-	     else if (evt.getSource()==silverD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.silver);
-         }
-	     else if (evt.getSource()==whiteD)
-         {
-    	 	race.setRaces(racePossible.dragonborn, subPossible.white);
+    	 	if (evt.getSource()==blackD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.black);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==blueD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.blue);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==brassD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.brass);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==bronzeD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.bronze);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==copperD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.copper);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==goldD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.gold);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==greenD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.green);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==redD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.red);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==silverD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.silver);
+    	 		dragonFrame.setVisible(false);
+            }
+    	 	else if (evt.getSource()==whiteD)
+            {
+    	 		race.setRaces(racePossible.dragonborn, subPossible.white);
+    	 		dragonFrame.setVisible(false);
+            }
          }
 	     //Dwarf Selection
 	     else if (evt.getSource()==dwarfB)
@@ -191,15 +201,17 @@ public class AppletRunner extends Applet implements ActionListener{
     	 	mountD.addActionListener(this);
     	 	dwarfFrame.add(hillD);
     	 	hillD.addActionListener(this);
+    	 	if (evt.getSource() == mountD)
+    	 	{
+    	 		dwarfFrame.setVisible(false);
+    	 		race.setRaces(racePossible.dwarf, subPossible.mountain);
+    	 	}
+    	 	else if (evt.getSource() == hillD)
+    	 	{
+    	 		dwarfFrame.setVisible(false);
+    	 		race.setRaces(racePossible.dwarf, subPossible.hill);
+    	 	}
          }
-	     else if (evt.getSource() == mountD)
-	     {
-	    	 race.setRaces(racePossible.dwarf, subPossible.mountain);
-	     }
-	     else if (evt.getSource() == hillD)
-	     {
-	    	 race.setRaces(racePossible.dwarf, subPossible.hill);
-	     }
 	     //Elf Selection
 	     else if (evt.getSource()==elfB)
          {
@@ -211,15 +223,17 @@ public class AppletRunner extends Applet implements ActionListener{
     	 	highE.addActionListener(this);
     	 	elfFrame.add(highE);
     	 	woodE.addActionListener(this);
+    	 	if (evt.getSource() == highE)
+    	 	{
+    	 		race.setRaces(racePossible.elf, subPossible.high);
+    	 		elfFrame.setVisible(false);
+    	 	}
+    	 	else if (evt.getSource() == woodE)
+    	 	{
+    	 		race.setRaces(racePossible.elf, subPossible.wood);
+    	 		elfFrame.setVisible(false);
+    	 	}
          }
-	     else if (evt.getSource() == highE)
-	     {
-	    	 race.setRaces(racePossible.elf, subPossible.high);
-	     }
-	     else if (evt.getSource() == hillD)
-	     {
-	    	 race.setRaces(racePossible.elf, subPossible.wood);
-	     }
 	     //Gnome Selection
 	     else if (evt.getSource()==gnomeB)
          {
@@ -231,15 +245,17 @@ public class AppletRunner extends Applet implements ActionListener{
     	 	deepG.addActionListener(this);
     	 	gnomeFrame.add(rockG);
     	 	rockG.addActionListener(this);
+    	 	if (evt.getSource() == deepG)
+    	 	{
+    	 		race.setRaces(racePossible.gnome, subPossible.deep);
+    	 		gnomeFrame.setVisible(false);
+    	 	}
+    	 	else if (evt.getSource() == rockG)
+    	 	{
+    	 		race.setRaces(racePossible.gnome, subPossible.rock);
+    	 		gnomeFrame.setVisible(false);
+    	 	}
          }
-	     else if (evt.getSource() == deepG)
-	     {
-	    	 race.setRaces(racePossible.gnome, subPossible.deep);
-	     }
-	     else if (evt.getSource() == rockG)
-	     {
-	    	 race.setRaces(racePossible.gnome, subPossible.rock);
-	     }
 	     //Half-Elf Selection
 	     else if (evt.getSource() == halfElfB)
 	     {
@@ -256,21 +272,39 @@ public class AppletRunner extends Applet implements ActionListener{
     	 	stoutH.addActionListener(this);
     	 	halflingFrame.add(lightH);
     	 	lightH.addActionListener(this);
+    	 	if (evt.getSource() == lightH)
+    	 	{
+    	 		race.setRaces(racePossible.halfling, subPossible.light);
+    	 		halflingFrame.setVisible(false);
+    	 	}
+    	 	else if (evt.getSource() == stoutH)
+    	 	{
+    	 		race.setRaces(racePossible.halfling, subPossible.stout);
+    	 		halflingFrame.setVisible(false);
+    	 	}
          }
-	     else if (evt.getSource() == lightH)
-	     {
-	    	 race.setRaces(racePossible.halfling, subPossible.light);
-	     }
-	     else if (evt.getSource() == stoutH)
-	     {
-	    	 race.setRaces(racePossible.halfling, subPossible.stout);
-	     }
 	     //Half-Orc Selection
 	     else if(evt.getSource() == halfOrcB)
 	     {
 	    	 race.setRaces(racePossible.halfOrc, null);
 	     }
-	     
+	     //Human Selection
+	     else if(evt.getSource() == humanB)
+	     {
+	    	 race.setRaces(racePossible.human,  null);
+	     }
+	     //Tiefling Selection
+	     else if(evt.getSource() == tieflingB)
+	     {
+	    	 race.setRaces(racePossible.tiefling,  null);
+	     }
+	     //Back to Home
+	     else if(race != null)
+	     {
+	    	 raceFrame.setVisible(false);
+	    	 homeFrame.remove(raceButton);
+	    	 setFrame(homeFrame, 1, 2, true);
+	     }
 	}
 	
 }

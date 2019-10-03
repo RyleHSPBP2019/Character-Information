@@ -1,16 +1,15 @@
 package races;
 
 public class Races {
-		racePossible raceType = null;
-		subPossible subType = null;
 		public Races() {
-			
+			racePossible raceType = null;
+			subPossible subType = null;
 		}
 	
 		
-		public void setRaces(racePossible RaceType, subPossible colortype) {
-		raceType = RaceType;
-		subType = colortype;
+		public void setRaces(racePossible RaceType, subPossible SubType) {
+		racePossible raceType = RaceType;
+		subPossible subType = SubType;
 		String asi= new String();
 		String age = new String();
 		String align = new String();
