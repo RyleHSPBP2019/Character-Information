@@ -12,6 +12,10 @@ import races.racePossible;
 import races.subPossible;
 
 public class AppletRunner extends Applet implements ActionListener{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//General Initialization
 	Frame homeFrame = new Frame("Homepage");
 	Frame raceFrame = new Frame("Races");
@@ -46,6 +50,15 @@ public class AppletRunner extends Applet implements ActionListener{
  	//Dwarf Buttons
  	Button mountD = new Button("Mountain Dwarf");
  	Button hillD = new Button("Hill Dwarf");
+ 	//Elf Buttons
+ 	Button highE = new Button("High Elf");
+ 	Button woodE = new Button("Wood Elf");
+ 	// Gnome Buttons
+ 	Button deepG = new Button("Deep Gnome");
+ 	Button rockG = new Button("Rock Gnome");
+ 	//Halfling Buttons
+ 	Button stoutH = new Button("Stout Halfling");
+ 	Button lightH  = new Button("Lightfoot Halfling");
 	public AppletRunner() {
 		setFrame(homeFrame, 1, 3, true);
 		setFrame(raceFrame, 3, 3, false);
@@ -187,6 +200,77 @@ public class AppletRunner extends Applet implements ActionListener{
 	     {
 	    	 race.setRaces(racePossible.dwarf, subPossible.hill);
 	     }
+	     //Elf Selection
+	     else if (evt.getSource()==elfB)
+         {
+    	 	Frame elfFrame = new Frame("Elf Subrace");
+    	 	raceFrame.setVisible(false);
+    	 	setFrame(elfFrame, 1, 2, true);
+    	 	
+    	 	elfFrame.add(woodE);
+    	 	highE.addActionListener(this);
+    	 	elfFrame.add(highE);
+    	 	woodE.addActionListener(this);
+         }
+	     else if (evt.getSource() == highE)
+	     {
+	    	 race.setRaces(racePossible.elf, subPossible.high);
+	     }
+	     else if (evt.getSource() == hillD)
+	     {
+	    	 race.setRaces(racePossible.elf, subPossible.wood);
+	     }
+	     //Gnome Selection
+	     else if (evt.getSource()==gnomeB)
+         {
+    	 	Frame gnomeFrame = new Frame("Gnome Subrace");
+    	 	raceFrame.setVisible(false);
+    	 	setFrame(gnomeFrame, 1, 2, true);
+    	 	
+    	 	gnomeFrame.add(deepG);
+    	 	deepG.addActionListener(this);
+    	 	gnomeFrame.add(rockG);
+    	 	rockG.addActionListener(this);
+         }
+	     else if (evt.getSource() == deepG)
+	     {
+	    	 race.setRaces(racePossible.gnome, subPossible.deep);
+	     }
+	     else if (evt.getSource() == rockG)
+	     {
+	    	 race.setRaces(racePossible.gnome, subPossible.rock);
+	     }
+	     //Half-Elf Selection
+	     else if (evt.getSource() == halfElfB)
+	     {
+	    	 race.setRaces(racePossible.halfElf, null);
+	     }
+	     //Halfling Selection
+	     else if (evt.getSource()==gnomeB)
+         {
+    	 	Frame halflingFrame = new Frame("Halflinf Subrace");
+    	 	raceFrame.setVisible(false);
+    	 	setFrame(halflingFrame, 1, 2, true);
+    	 	
+    	 	halflingFrame.add(stoutH);
+    	 	stoutH.addActionListener(this);
+    	 	halflingFrame.add(lightH);
+    	 	lightH.addActionListener(this);
+         }
+	     else if (evt.getSource() == lightH)
+	     {
+	    	 race.setRaces(racePossible.halfling, subPossible.light);
+	     }
+	     else if (evt.getSource() == stoutH)
+	     {
+	    	 race.setRaces(racePossible.halfling, subPossible.stout);
+	     }
+	     //Half-Orc Selection
+	     else if(evt.getSource() == halfOrcB)
+	     {
+	    	 race.setRaces(racePossible.halfOrc, null);
+	     }
+	     
 	}
 	
 }

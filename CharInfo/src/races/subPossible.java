@@ -13,5 +13,10 @@ public enum subPossible {
 		gold,
 		mountain,
 		hill,
-		
+		high,
+		wood,
+		deep,
+		rock,
+		stout,
+		light
 	}
