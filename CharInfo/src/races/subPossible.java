@@ -18,5 +18,6 @@ public enum subPossible {
 		deep,
 		rock,
 		stout,
-		light
+		light,
+		nun
 	}
