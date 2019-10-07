@@ -29,6 +29,15 @@ public class Races {
 			speed = "30ft";
 			languages = "You can read, speak, and write in common and draconic";
 			break;
+		case dwarf:
+			asi = "constitution + 2";
+			age = "50-350";
+			align = "Generally Lawful Good";
+			size = "Genreally 4ft - 5ft";
+			speed = "25ft";
+			vision = true;
+			languages = "You can read, speak, and write in common and dwarvish";
+			extra = "You have advantages on saving rolls against poison, you are also"; 
 		}
 		//Sets Sub Race
 		switch(subType) {
