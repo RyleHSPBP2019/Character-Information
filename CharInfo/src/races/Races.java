@@ -13,12 +13,13 @@ public class Races {
 		String asi= new String();
 		String age = new String();
 		String align = new String();
+		String size = new string();
 		String speed = new String();
 		String extra = new String();
 		String extra2 = new String();
 		String extra3 = new String();
 		String languages = new String();
-		
+		boolean vision = false;
 		
 		//Sets Base Race
 		switch (raceType) {
