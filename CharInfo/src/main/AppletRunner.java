@@ -34,7 +34,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	Button tieflingB = new Button("Tiefling");
 	//Race Stuff
 	Races race = new Races();
-	//Dragon Color Stuff
+	//Dragon Stuff
  	Frame dragonFrame = new Frame("Dragonborn Colors");
  	Button blackD = new Button("Black Dragonborn");
  	Button blueD = new Button("Blue Dragonborn");

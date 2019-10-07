@@ -13,7 +13,7 @@ public class Races {
 		String asi= new String();
 		String age = new String();
 		String align = new String();
-		String size = new string();
+		String size = new String();
 		String speed = new String();
 		String extra = new String();
 		String extra2 = new String();
@@ -79,7 +79,7 @@ public class Races {
 			 break;
 		case mountain:
 			asi = "Constitution + 1 and Strength + 2";
-			extra4 = " proficiency with light and medium armor"
+			extra4 = " proficiency with light and medium armor";
 			break;
 			
 		case nun:

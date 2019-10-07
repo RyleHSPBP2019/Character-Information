@@ -12,5 +12,6 @@ public enum classPoss {
 	rogue,
 	sorcerer,
 	warlock,
-	wizard
+	wizard,
+	none
 }

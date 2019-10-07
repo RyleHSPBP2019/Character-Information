@@ -20,7 +20,7 @@ public enum archPoss {
 	shadow,
 	elements,
 	hand,
-	deovtion,
+	devotion,
 	ancients,
 	vengence,
 	hunter,
