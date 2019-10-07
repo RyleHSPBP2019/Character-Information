@@ -60,6 +60,11 @@ public class Races {
 			extra = "15ft Cone (con. save). Fire Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
 			extra2 ="You are also resistant to Fire damage";
 			break;
+		case hill:
+			extra = "";
+			extra2 = "";
+		case nun:
+			break;
 		}
 	}
 	/*public String getAge() {
