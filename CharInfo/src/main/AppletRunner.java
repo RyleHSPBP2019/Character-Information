@@ -9,6 +9,8 @@ import races.Races;
 import races.racePossible;
 import races.subPossible;
 
+import classesPack.*;
+
 public class AppletRunner extends Applet implements ActionListener{
 	/**
 	 * 
@@ -32,8 +34,10 @@ public class AppletRunner extends Applet implements ActionListener{
 	Button halfOrcB = new Button("Half-Orc");
 	Button humanB = new Button("Human");
 	Button tieflingB = new Button("Tiefling");
-	//Race Stuff
+	//User Stuff
 	Races race = new Races();
+	dndClasses userClass = new dndClasses();
+	int level = 1;
 	//Dragon Stuff
  	Frame dragonFrame = new Frame("Dragonborn Colors");
  	Button blackD = new Button("Black Dragonborn");
@@ -64,10 +68,89 @@ public class AppletRunner extends Applet implements ActionListener{
  	Button lightH  = new Button("Lightfoot Halfling");
  	
  	//Classes Buttons
+ 	Button barbarianB = new Button("Barbarian");
+ 	Button bardB = new Button("Bard");
+ 	Button clericB = new Button("Cleric");
+ 	Button druidB = new Button("Druid");
+ 	Button fighterB = new Button("Fighter");
+ 	Button monkB = new Button("Monk");
+ 	Button paladinB = new Button("Paladin");
+ 	Button rangerB = new Button("Ranger");
+ 	Button rogueB = new Button("Rogue");
+ 	Button sorcererB = new Button("Sorcerer");
+ 	Button warlockB = new Button("Warlock");
+ 	Button wizardB = new Button("Wizard");
+ 	//Barbarian
+ 	Frame barbFrame = new Frame("Barbrian");
+ 	Button berserker = new Button("Berserker Barbarian");
+ 	Button totem = new Button("Totem Warrior Barbarian");
+ 	//Bard
+ 	Frame bardFrame = new Frame("Bard");
+ 	Button lore = new Button("College of Lore");
+ 	Button valor = new Button("College of Valor");
+ 	//Cleric
+ 	Frame clericFrame = new Frame("Cleric");
+ 	Button knowledge = new Button("Knowledge Domain");
+ 	Button life = new Button("Life Domain");
+ 	Button light = new Button("Light Domain");
+ 	Button nature = new Button("Nature Domain");
+ 	Button tempest = new Button("Tempest Domain");
+ 	Button trickery = new Button("Trickery Domain");
+ 	Button war = new Button("War DOmain");
+ 	//Druid
+ 	Frame druidFrame = new Frame("Druid");
+ 	Button land = new Button("Circle of Land");
+ 	Button moon = new Button("Circle of Moon");
+ 	//Fighter
+ 	Frame fighterFrame = new Frame("Fighter");
+ 	Button champion = new Button("Champion Fighter");
+ 	Button battle = new Button("Battle Master");
+ 	Button eldritch = new Button("Eldritch Knight");
+ 	//Monk
+ 	Frame monkFrame = new Frame("Monk");
+ 	Button elements = new Button("Way of the Four Elements");
+ 	Button shadow = new Button("Way of the Shadow");
+ 	Button hand = new Button("Way of the Open Hand");
+ 	//Paladin
+ 	Frame paladinFrame = new Frame("Paladin");
+ 	Button vengence = new Button("Oath of Vengence");
+ 	Button devotion = new Button("Oath of Devotion");
+ 	Button ancients = new Button("Oath of the Ancients");
+ 	//Ranger
+ 	Frame rangerFrame = new Frame("Ranger");
+ 	Button hunter = new Button("Hunter Ranger");
+ 	Button beast = new Button("Beast Master Ranger");
+ 	//Rogue
+ 	Frame rogueFrame = new Frame("Rogue");
+ 	Button assassin = new Button("Assassin Rogue");
+ 	Button thief = new Button("Thief Rogue");
+ 	Button trick = new Button("Arcan Trickster Rogue");
+ 	//Sorcerer
+ 	Frame sorcererFrame = new Frame("Sorcerer");
+ 	Button wild = new Button("Wild Magic Sorcerer");
+ 	Button dragon = new Button("Draconic Sorcerer");
+ 	//Warlock
+ 	Frame warlockFrame = new Frame("Warlock");
+ 	Button fiend = new Button("Fiend Patron");
+ 	Button fey = new Button("Fey Patron");
+ 	Button gOO = new Button("Great Old One Patron");
+ 	Button blade = new Button("Pact of the Blade");
+ 	Button tome = new Button("Pact of the Tome");
+ 	Button chain = new Button("Pact of the Chain");
+ 	//Wizard
+ 	Frame wizardFrame = new Frame("Wizard");
+ 	Button abjuration = new Button("School of Abjuration");
+ 	Button conjuration = new Button("School of Conjuration");
+ 	Button divination = new Button("School of Divination");
+ 	Button enchantment = new Button("School of Enchantment");
+ 	Button evocation = new Button("School of Evocation");
+ 	Button illusion = new Button("School of Illusion"); 
+ 	Button necromancy = new Button("School of Necromancy");
+ 	Button transmutation = new Button("School of Trnsmutation");
 	public AppletRunner() {
 		setFrame(homeFrame, 1, 3, true);
 		setFrame(raceFrame, 3, 3, false);
-		setFrame(classFrame, 1, 1, false);
+		setFrame(classFrame, 4, 3, false);
 		setFrame(backgroundFrame, 1, 1, false);
 		homeFrame.add(raceButton);
 		raceButton.addActionListener(this);
@@ -76,6 +159,7 @@ public class AppletRunner extends Applet implements ActionListener{
 		homeFrame.add(backgroundButton);
 		backgroundButton.addActionListener(this);
 		
+		//Race Frame Button setting
 		raceFrame.add(dragonbornB);
 		dragonbornB.addActionListener(this);
 		raceFrame.add(dwarfB);
@@ -94,6 +178,32 @@ public class AppletRunner extends Applet implements ActionListener{
 		humanB.addActionListener(this);
 		raceFrame.add(tieflingB);
 		tieflingB.addActionListener(this);
+		
+		//Class Frame Button Setting
+		classFrame.add(barbarianB);
+		barbarianB.addActionListener(this);
+		classFrame.add(bardB);
+		bardB.addActionListener(this);
+		classFrame.add(clericB);
+		clericB.addActionListener(this);
+		classFrame.add(druidB);
+		druidB.addActionListener(this);
+		classFrame.add(fighterB);
+		fighterB.addActionListener(this);
+		classFrame.add(monkB);
+		monkB.addActionListener(this);
+		classFrame.add(paladinB);
+		paladinB.addActionListener(this);
+		classFrame.add(rangerB);
+		rangerB.addActionListener(this);
+		classFrame.add(rogueB);
+		rogueB.addActionListener(this);
+		classFrame.add(sorcererB);
+		sorcererB.addActionListener(this);
+		classFrame.add(warlockB);
+		warlockB.addActionListener(this);
+		classFrame.add(wizardB);
+		wizardB.addActionListener(this);
 	}
 	public void setFrame(Frame f, int x, int y, boolean onOff) {
 		f.setLayout(new GridLayout(x, y));
@@ -330,6 +440,20 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 setFrame(homeFrame, 1, 2, true);
 	     }
 	     //Classes
+	     //Barbarian
+	     else if (evt.getSource() == barbarianB)
+	     {
+	    	 homeFrame.setVisible(false);
+	    	 setFrame(barbFrame, 1, 2, true);
+	    	 barbFrame.add(berserker);
+	    	 berserker.addActionListener(this);
+	    	 barbFrame.add(totem);
+	    	 totem.addActionListener(this);
+	     }
+	     else if(evt.getSource() == berserker)
+	     {
+	    	 userClass.setClass(archPoss.berserker, classPoss.barbarian, level);
+	     }
 	}
 	
 }
