@@ -5,6 +5,8 @@ public enum archPoss {
 	berserker,
 	lore,
 	valor,
+	death,
+	forge,
 	knowledge,
 	life,
 	light,
