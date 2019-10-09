@@ -55,10 +55,25 @@ public class Races {
 			extra3 = "Elves don’t need to sleep. Instead, they meditate deeply";
 		case gnome:
 			extra ="You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic";
-					
+			break;
+		case halfElf:
+			asi = "Charisma + 2 and two other ability scores of your choice increase by 1";
+			age = "20 - 180";
+			align = "Generally True Nertual";
+			size = "Generally 5ft - 6ft";
+			speed = "30ft";
+			vision = true;
+			extra = "advantage on saving throws against being charmed, and magic can’t put you to sleep";
+			extra2 = "You gain proficiency in two skills of your choice";
+			languages = "You can speak, read, and write Common, Elvish, and one extra language of your choice";
+			break;
+		case halfling:
+			break;
+		
 		}
 		//Sets Sub Race
 		switch(subType) {
+		//Dragonborn Subraces
 		case white:
 		case silver:
 			extra = "15ft Cone (con. save). Cold Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
@@ -87,7 +102,7 @@ public class Races {
 			extra = "15ft Cone (con. save). Fire Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
 			extra2 ="You are also resistant to Fire damage";
 			break;
-		
+		//Dwarf Subraces
 		case hill:
 			 asi = "Constitution + 1 and Wisdom + 1";
 			 extra4 = "Your maximum HP increases by 1 every level";
@@ -96,7 +111,7 @@ public class Races {
 			asi = "Constitution + 1 and Strength + 2";
 			extra4 = " proficiency with light and medium armor";
 			break;
-			
+		//Elf Subraces
 		case high:
 			asi = "Dexterity + 2 and Intelligence + 1";
 			speed = "30ft";
@@ -110,6 +125,30 @@ public class Races {
 			extra4 = "proficiency with the longsword, shortsword, shortbow, and longbow";
 			extra5 = "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena";
 			languages = "You can read, speak, and write in common and elvish";
+			break;
+		//Gnome Subraces
+		case deep:
+			asi = "Intelligence + 2 and Dexterity + 1";
+			align = "Generally Netrual";
+			age = "20 - 250";
+			size = "Generally 3 to 3'6";
+			speed = "25ft";
+			vision = true;
+			extra2 = " advantage on Dexterity (stealth) checks to hide in rocky terrain";
+			languages = "You can read, speak, and write in Common, Gnomish, and Undercommon";
+			break;
+		case rock:
+			asi = "Constitution + 1 and Intelligence + 2";
+			align = "Generally Netrual";
+			age = "40 - 350";
+			size = "Generally 3 to 4";
+			speed = "25ft";
+			vision = true;
+			languages = "You can read, speak, and write in Common and Gnomish";
+			extra2 = "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply";
+			extra3 = "You have proficiency with artisan’s tools (tinker’s tools)";
+			break;
+			
 		case nun:
 			break;
 		}
