@@ -68,6 +68,45 @@ public class Races {
 			languages = "You can speak, read, and write Common, Elvish, and one extra language of your choice";
 			break;
 		case halfling:
+			age = "20 - 200";
+			align = "generally Lawful Good";
+			size = "genereally 3ft tall";
+			speed = "25ft";
+			extra = "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll";
+			extra2 = "You have advantage on saving throws against being frightened";
+			extra3 = "You can move through the space of any creature that is of a size larger than yours";
+			languages = "You can speak, read, and write Common and Halfling";
+			break;
+		case halfOrc:
+			asi = "Strength + 2 and Constitution + 1";
+			age = "14 to 75";
+			align = "Chaotic Neutral";
+			size = "generally 5ft to well over 6ft";
+			speed = "30ft";
+			vision = true;
+			extra = "You gain proficiency in the Intimidation skill";
+			extra2 = "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest";
+			extra3 = "When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit";
+			languages = "You can speak, read, and write Common and Orc";
+			break;
+		case human:
+			asi = "Ability + 1";
+			age = "18 to 100";
+			align = "genereally true neutral";
+			size = "genereally 5 ft to 6 ft";
+			speed = "30ft";
+			languages = "You can speak, read, and write Common and one extra language of your choice";
+			break;
+		case tiefling:
+			asi = "Intelligence + 1 and Charisma + 2";
+			age = "18 to 120";
+			align = "genereally Chaotic Evil";
+			size = "genereally 5 ft to 6 ft";
+			speed = "30ft";
+			vision = true;
+			extra = "You have resistance to fire damage";
+			extra2 = "You know the thaumaturgy cantrip";
+			languages = "You can speak, read, and write Common and Infernal";
 			break;
 		
 		}
@@ -148,7 +187,15 @@ public class Races {
 			extra2 = "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply";
 			extra3 = "You have proficiency with artisan’s tools (tinker’s tools)";
 			break;
-			
+		//Halflings Subraces
+		case light:
+			asi = "Charisma + 1 and Dexterity + 2";
+			extra4 = "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you";
+			break;
+		case stout:
+			asi = "Constitution + 1 and Dexterity + 2";
+			extra4 = "You have advantage on saving throws against poison, and you have resistance against poison damage";
+			break;
 		case nun:
 			break;
 		}
