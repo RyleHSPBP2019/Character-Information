@@ -4,11 +4,13 @@ public class dndClasses {
 	public dndClasses() {
 		archPoss archType = archPoss.none;
 		classPoss classType = classPoss.none;
+		warlockPact pactType = warlockPact.none;
 	}
-	public void setClass(archPoss Archtype, classPoss ClassType, String lvl) {
+	public void setClass(archPoss Archtype, classPoss ClassType, warlockPact PactType, int lvl) {
 		classPoss classType = ClassType;
 		archPoss archType = Archtype;
-		String level = lvl;
+		warlockPact pactType = PactType;
+		int level = lvl;
 		
 		switch (classType) {
 		case barbarian:
@@ -97,23 +99,11 @@ public class dndClasses {
 			break;
 		case dragon:
 			break;
-		case bladeFiend:
+		case fiend:
 			break;
-		case bladeFey:
+		case fey:
 			break;
-		case bladeGOO:
-			break;
-		case chainFiend:
-			break;
-		case chainFey:
-			break;
-		case chainGOO:
-			break;
-		case tomeFiend:
-			break;
-		case tomeFey:
-			break;
-		case tomeGOO:
+		case gOO:
 			break;
 		case abjuration:
 			break;

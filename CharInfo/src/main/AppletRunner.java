@@ -41,6 +41,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	Races race = new Races();
 	dndClasses userClass = new dndClasses();
 	String level = new String("1");
+	int numLevel = 1;
 	//Dragon Stuff
  	Frame dragonFrame = new Frame("Dragonborn Colors");
  	Button blackD = new Button("Black Dragonborn");
@@ -135,7 +136,9 @@ public class AppletRunner extends Applet implements ActionListener{
  	Button wild = new Button("Wild Magic Sorcerer");
  	Button dragon = new Button("Draconic Sorcerer");
  	//Warlock
+ 	String warl = "none";
  	Frame warlockFrame = new Frame("Warlock");
+ 	Frame warlock2Frame = new Frame("Warlock Pact");
  	Button fiend = new Button("Fiend Patron");
  	Button fey = new Button("Fey Patron");
  	Button gOO = new Button("Great Old One Patron");
@@ -193,6 +196,7 @@ public class AppletRunner extends Applet implements ActionListener{
 		levelFrame.add(text);
 		levelFrame.add(submit);
 		submit.addActionListener(this);
+		
 		//Class Frame Button Setting
 		classFrame.add(barbarianB);
 		barbarianB.addActionListener(this);
@@ -240,6 +244,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	     else if(evt.getSource() == submit)
 	     {
 	    	level = text.getText();
+	    	numLevel = getLevel();
 	    	levelFrame.setVisible(false);
 	    	classFrame.setVisible(true);
 	     }
@@ -471,13 +476,13 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == berserker)
 	     {
-	    	 userClass.setClass(archPoss.berserker, classPoss.barbarian, level);
+	    	 userClass.setClass(archPoss.berserker, classPoss.barbarian, warlockPact.none, numLevel);
 	    	 barbFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == totem)
 	     {
-	    	 userClass.setClass(archPoss.totem, classPoss.barbarian, level);
+	    	 userClass.setClass(archPoss.totem, classPoss.barbarian, warlockPact.none, numLevel);
 	    	 barbFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -494,13 +499,13 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == lore)
 	     {
-	    	 userClass.setClass(archPoss.lore, classPoss.bard, level);
+	    	 userClass.setClass(archPoss.lore, classPoss.bard, warlockPact.none, numLevel);
 	    	 bardFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == valor)
 	     {
-	    	 userClass.setClass(archPoss.valor, classPoss.bard, level);
+	    	 userClass.setClass(archPoss.valor, classPoss.bard, warlockPact.none, numLevel);
 	    	 bardFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -533,55 +538,55 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == death)
 	     {
-	    	 userClass.setClass(archPoss.death, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.death, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == forge)
 	     {
-	    	 userClass.setClass(archPoss.forge, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.forge, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 clericFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == knowledge)
 	     {
-	    	 userClass.setClass(archPoss.knowledge, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.knowledge, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == light)
 	     {
-	    	 userClass.setClass(archPoss.light, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.light, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == life)
 	     {
-	    	 userClass.setClass(archPoss.life, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.life, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == nature)
 	     {
-	    	 userClass.setClass(archPoss.nature, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.nature, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == tempest)
 	     {
-	    	 userClass.setClass(archPoss.tempest, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.tempest, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == trickery)
 	     {
-	    	 userClass.setClass(archPoss.trickery, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.trickery, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == war)
 	     {
-	    	 userClass.setClass(archPoss.war, classPoss.cleric, level);
+	    	 userClass.setClass(archPoss.war, classPoss.cleric, warlockPact.none, numLevel);
 	    	 clericFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -598,13 +603,13 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == moon)
 	     {
-	    	 userClass.setClass(archPoss.moon, classPoss.druid, level);
+	    	 userClass.setClass(archPoss.moon, classPoss.druid, warlockPact.none, numLevel);
 	    	 druidFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == land)
 	     {
-	    	 userClass.setClass(archPoss.land, classPoss.druid, level);
+	    	 userClass.setClass(archPoss.land, classPoss.druid, warlockPact.none, numLevel);
 	    	 druidFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -623,19 +628,19 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == champion)
 	     {
-	    	 userClass.setClass(archPoss.champion, classPoss.fighter, level);
+	    	 userClass.setClass(archPoss.champion, classPoss.fighter, warlockPact.none, numLevel);
 	    	 fighterFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == battle)
 	     {
-	    	 userClass.setClass(archPoss.battleMaster, classPoss.fighter, level);
+	    	 userClass.setClass(archPoss.battleMaster, classPoss.fighter, warlockPact.none, numLevel);
 	    	 fighterFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == eldritch)
 	     {
-	    	 userClass.setClass(archPoss.eldritchKnight, classPoss.fighter, level);
+	    	 userClass.setClass(archPoss.eldritchKnight, classPoss.fighter, warlockPact.none, numLevel);
 	    	 fighterFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -654,19 +659,19 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == hand)
 	     {
-	    	 userClass.setClass(archPoss.hand, classPoss.monk, level);
+	    	 userClass.setClass(archPoss.hand, classPoss.monk, warlockPact.none, numLevel);
 	    	 monkFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == elements)
 	     {
-	    	 userClass.setClass(archPoss.elements, classPoss.monk, level);
+	    	 userClass.setClass(archPoss.elements, classPoss.monk, warlockPact.none, numLevel);
 	    	 monkFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == shadow)
 	     {
-	    	 userClass.setClass(archPoss.shadow, classPoss.monk, level);
+	    	 userClass.setClass(archPoss.shadow, classPoss.monk, warlockPact.none, numLevel);
 	    	 monkFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -685,19 +690,19 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == devotion)
 	     {
-	    	 userClass.setClass(archPoss.devotion, classPoss.paladin, level);
+	    	 userClass.setClass(archPoss.devotion, classPoss.paladin, warlockPact.none, numLevel);
 	    	 paladinFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == ancients)
 	     {
-	    	 userClass.setClass(archPoss.ancients, classPoss.paladin, level);
+	    	 userClass.setClass(archPoss.ancients, classPoss.paladin, warlockPact.none, numLevel);
 	    	 paladinFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == vengence)
 	     {
-	    	 userClass.setClass(archPoss.vengence, classPoss.paladin, level);
+	    	 userClass.setClass(archPoss.vengence, classPoss.paladin, warlockPact.none, numLevel);
 	    	 paladinFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -714,13 +719,13 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == hunter)
 	     {
-	    	 userClass.setClass(archPoss.hunter, classPoss.ranger, level);
+	    	 userClass.setClass(archPoss.hunter, classPoss.ranger, warlockPact.none, numLevel);
 	    	 rangerFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == beast)
 	     {
-	    	 userClass.setClass(archPoss.beastMaster, classPoss.monk, level);
+	    	 userClass.setClass(archPoss.beastMaster, classPoss.monk, warlockPact.none, numLevel);
 	    	 rangerFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -739,19 +744,19 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == thief)
 	     {
-	    	 userClass.setClass(archPoss.thief, classPoss.rogue, level);
+	    	 userClass.setClass(archPoss.thief, classPoss.rogue, warlockPact.none, numLevel);
 	    	 rogueFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == assassin)
 	     {
-	    	 userClass.setClass(archPoss.assassin, classPoss.rogue, level);
+	    	 userClass.setClass(archPoss.assassin, classPoss.rogue, warlockPact.none, numLevel);
 	    	 rogueFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == trick)
 	     {
-	    	 userClass.setClass(archPoss.trickster, classPoss.rogue, level);
+	    	 userClass.setClass(archPoss.trickster, classPoss.rogue, warlockPact.none, numLevel);
 	    	 rogueFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
@@ -768,19 +773,20 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == wild)
 	     {
-	    	 userClass.setClass(archPoss.wild, classPoss.sorcerer, level);
+	    	 userClass.setClass(archPoss.wild, classPoss.sorcerer, warlockPact.none, numLevel);
 	    	 sorcererFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == dragon)
 	     {
-	    	 userClass.setClass(archPoss.dragon, classPoss.sorcerer, level);
+	    	 userClass.setClass(archPoss.dragon, classPoss.sorcerer, warlockPact.none, numLevel);
 	    	 sorcererFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
 	     else if(evt.getSource() == warlockB)
 	     {
-	    	homeFrame.setVisble(false);
+	    	 numLevel = getLevel();
+	    	 homeFrame.setVisible(false);
 	    	setFrame(warlockFrame, 1, 3, true);
 	    	warlockFrame.add(fiend);
 	    	fiend.addActionListener(this);
@@ -790,7 +796,177 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	gOO.addActionListener(this);
 	    	classFrame.setVisible(false);
 	     }
-	     
+	     else if(evt.getSource() == fiend)
+	     {
+	    	 if(numLevel >= 3)
+	    	 {
+	    		 warlockFrame.setVisible(false);
+	    		 setFrame(warlock2Frame, 3, 1, true);
+	    		 warlock2Frame.add(blade);
+	    		 blade.addActionListener(this);
+	    		 warlock2Frame.add(tome);
+	    		 tome.addActionListener(this);
+	    		 warlock2Frame.add(chain);
+	    		 chain.addActionListener(this);
+	    	 }
+	    	 else if(numLevel < 3 && numLevel > 0)
+	    	 {
+	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.none, numLevel);
+	    		 warlockFrame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 warl = "fiend";
+	     }
+	     else if(evt.getSource() == fey)
+	     {
+	    	 if(numLevel >= 3)
+	    	 {
+	    		 warlockFrame.setVisible(false);
+	    		 setFrame(warlock2Frame, 3, 1, true);
+	    		 warlock2Frame.add(blade);
+	    		 blade.addActionListener(this);
+	    		 warlock2Frame.add(tome);
+	    		 tome.addActionListener(this);
+	    		 warlock2Frame.add(chain);
+	    		 chain.addActionListener(this);
+	    	 }
+	    	 else if(numLevel < 3 && numLevel > 0)
+	    	 {
+	    		 userClass.setClass(archPoss.fey, classPoss.warlock, warlockPact.none, numLevel);
+	    		 warlockFrame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 warl = "fey";
+	     }
+	     else if(evt.getSource() == gOO)
+	     {
+	    	 if(numLevel >= 3)
+	    	 {
+	    		 warlockFrame.setVisible(false);
+	    		 setFrame(warlock2Frame, 1, 3, true);
+	    		 warlock2Frame.add(blade);
+	    		 blade.addActionListener(this);
+	    		 warlock2Frame.add(tome);
+	    		 tome.addActionListener(this);
+	    		 warlock2Frame.add(chain);
+	    		 chain.addActionListener(this);
+	    	 }
+	    	 else if(numLevel < 3 && numLevel > 0)
+	    	 {
+	    		 userClass.setClass(archPoss.gOO, classPoss.warlock, warlockPact.none, numLevel);
+	    		 warlockFrame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 warl = "gOO";
+	     }
+	     else if(evt.getSource() == blade)
+	     {
+	    	 if(warl == "fiend")
+	    	 {
+	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.blade, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 else if(warl == "fey")
+	    	 {
+	    		 userClass.setClass(archPoss.fey, classPoss.warlock, warlockPact.blade, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 else if(warl == "gOO")
+	    	 {
+	    		 userClass.setClass(archPoss.gOO, classPoss.warlock, warlockPact.blade, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	     }
+	     else if(evt.getSource() == tome)
+	     {
+	    	 if(warl == "fiend")
+	    	 {
+	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.tome, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 else if(warl == "fey")
+	    	 {
+	    		 userClass.setClass(archPoss.fey, classPoss.warlock, warlockPact.tome, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 else if(warl == "gOO")
+	    	 {
+	    		 userClass.setClass(archPoss.gOO, classPoss.warlock, warlockPact.tome, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	     }
+	     else if(evt.getSource() == chain)
+	     {
+	    	 if(warl == "fiend")
+	    	 {
+	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.chain, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 else if(warl == "fey")
+	    	 {
+	    		 userClass.setClass(archPoss.fey, classPoss.warlock, warlockPact.chain, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	    	 else if(warl == "gOO")
+	    	 {
+	    		 userClass.setClass(archPoss.gOO, classPoss.warlock, warlockPact.chain, numLevel);
+	    		 warlock2Frame.setVisible(false);
+	    		 homeFrame.setVisible(true);
+	    	 }
+	     }
+	}
+	public int getLevel() {		
+		if(level == "20")
+			return 20;
+		else if(level == "19")
+			return 19;
+		else if(level == "18")
+			return 18;
+		else if(level == "17")
+			return 17;
+		else if(level == "16")
+			return 16;
+		else if(level == "15")
+			return 15;
+		else if(level == "14")
+			return 14;
+		else if(level == "13")
+			return 13;
+		else if(level == "12")
+			return 12;
+		else if(level == "11")
+			return 11;
+		else if(level == "10")
+			return 10;
+		else if(level == "9")
+			return 9;
+		else if(level == "8")
+			return 8;
+		else if(level == "7")
+			return 7;
+		else if(level == "6")
+			return 6;
+		else if(level == "5")
+			return 5;
+		else if(level == "4")
+			return 4;
+		else if(level == "3")
+			return 3;
+		else if(level == "2")
+			return 2;
+		else if(level == "1")
+			return 1;
+		else
+			return 0;
+		
 	}
 	
 	
