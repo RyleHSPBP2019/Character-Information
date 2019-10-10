@@ -20,6 +20,9 @@ public class AppletRunner extends Applet implements ActionListener{
 	Frame homeFrame = new Frame("Homepage");
 	Frame raceFrame = new Frame("Races");
 	Frame classFrame = new Frame("Classes");
+	Frame levelFrame = new Frame("Level");
+	TextField text = new TextField("Enter a level please");
+	Button submit = new Button("Submit");
 	Frame backgroundFrame = new Frame("Backgrounds");
 	Button raceButton = new Button("Races");
 	Button classButton = new Button("Classes");
@@ -37,7 +40,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	//User Stuff
 	Races race = new Races();
 	dndClasses userClass = new dndClasses();
-	int level = 1;
+	String level = new String("1");
 	//Dragon Stuff
  	Frame dragonFrame = new Frame("Dragonborn Colors");
  	Button blackD = new Button("Black Dragonborn");
@@ -149,6 +152,10 @@ public class AppletRunner extends Applet implements ActionListener{
  	Button illusion = new Button("School of Illusion"); 
  	Button necromancy = new Button("School of Necromancy");
  	Button transmutation = new Button("School of Trnsmutation");
+ 	public void paint(Graphics g)
+ 	{
+ 		g.drawString(level, 10, 10);
+ 	}
 	public AppletRunner() {
 		setFrame(homeFrame, 1, 3, true);
 		setFrame(raceFrame, 3, 3, false);
@@ -181,6 +188,11 @@ public class AppletRunner extends Applet implements ActionListener{
 		raceFrame.add(tieflingB);
 		tieflingB.addActionListener(this);
 		
+		//Level Frame
+		levelFrame.setSize(1000, 1000);
+		levelFrame.add(text);
+		levelFrame.add(submit);
+		submit.addActionListener(this);
 		//Class Frame Button Setting
 		classFrame.add(barbarianB);
 		barbarianB.addActionListener(this);
@@ -215,15 +227,22 @@ public class AppletRunner extends Applet implements ActionListener{
 	public void actionPerformed(ActionEvent evt)
 	{
 	     if (evt.getSource()==raceButton)
-	         {
+	     {
 	            homeFrame.setVisible(false);
 	            raceFrame.setVisible(true);
-	         }
+	     }
 	     else if (evt.getSource()==classButton)
-	         {
+	     {
 	    	 	homeFrame.setVisible(false);
-	    	 	classFrame.setVisible(true);
-	         }
+	    	 	repaint();
+	    	 	setFrame(levelFrame, 1, 2, true);
+	     }
+	     else if(evt.getSource() == submit)
+	     {
+	    	level = text.getText();
+	    	levelFrame.setVisible(false);
+	    	classFrame.setVisible(true);
+	     }
 	     else if (evt.getSource()==backgroundButton)
 	         {
 	    	 	homeFrame.setVisible(false);
@@ -759,6 +778,20 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 sorcererFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
+	     else if(evt.getSource() == warlockB)
+	     {
+	    	homeFrame.setVisble(false);
+	    	setFrame(warlockFrame, 1, 3, true);
+	    	warlockFrame.add(fiend);
+	    	fiend.addActionListener(this);
+	    	warlockFrame.add(fey);
+	    	fey.addActionListener(this);
+	    	warlockFrame.add(gOO);
+	    	gOO.addActionListener(this);
+	    	classFrame.setVisible(false);
+	     }
+	     
 	}
+	
 	
 }

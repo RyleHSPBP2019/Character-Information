@@ -5,10 +5,10 @@ public class dndClasses {
 		archPoss archType = archPoss.none;
 		classPoss classType = classPoss.none;
 	}
-	public void setClass(archPoss Archtype, classPoss ClassType, int lvl) {
+	public void setClass(archPoss Archtype, classPoss ClassType, String lvl) {
 		classPoss classType = ClassType;
 		archPoss archType = Archtype;
-		int level = lvl;
+		String level = lvl;
 		
 		switch (classType) {
 		case barbarian:
