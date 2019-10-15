@@ -2,8 +2,8 @@ package races;
 
 public class Races {
 		public Races() {
-			racePossible raceType = null;
-			subPossible subType = null;
+			racePossible raceType = racePossible.none;
+			subPossible subType = subPossible.nun;
 		}
 	
 		

@@ -9,6 +9,7 @@ public enum racePossible {
 	halfling,
 	halfOrc,
 	human,
-	tiefling
+	tiefling,
+	none
 }
 

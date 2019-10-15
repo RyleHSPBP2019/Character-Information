@@ -16,6 +16,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	Button test = new Button();
 	//General Initialization
 	Frame homeFrame = new Frame("Homepage");
 	Frame raceFrame = new Frame("Races");
@@ -171,6 +172,8 @@ public class AppletRunner extends Applet implements ActionListener{
 		homeFrame.add(backgroundButton);
 		backgroundButton.addActionListener(this);
 		
+		
+		
 		//Race Frame Button setting
 		raceFrame.add(dragonbornB);
 		dragonbornB.addActionListener(this);
@@ -244,7 +247,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	     else if(evt.getSource() == submit)
 	     {
 	    	level = text.getText();
-	    	numLevel = getLevel();
+	    	getLevel();
 	    	levelFrame.setVisible(false);
 	    	classFrame.setVisible(true);
 	     }
@@ -783,10 +786,10 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 sorcererFrame.setVisible(false);
 	    	 homeFrame.setVisible(true);
 	     }
+	     //Warlock Stuff
 	     else if(evt.getSource() == warlockB)
 	     {
-	    	 numLevel = getLevel();
-	    	 homeFrame.setVisible(false);
+	    	homeFrame.setVisible(false);
 	    	setFrame(warlockFrame, 1, 3, true);
 	    	warlockFrame.add(fiend);
 	    	fiend.addActionListener(this);
@@ -798,8 +801,25 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == fiend)
 	     {
-	    	 if(numLevel >= 3)
-	    	 {
+	    	 switch(numLevel) {
+	    	 case 20:
+	    	 case 19:
+	    	 case 18:
+	    	 case 17:
+	    	 case 16:
+	    	 case 15:
+	    	 case 14:
+	    	 case 13:
+	    	 case 12:
+	    	 case 11:
+	    	 case 10:
+	    	 case 9:
+	    	 case 8:
+	    	 case 7:
+	    	 case 6:
+	    	 case 5:
+	    	 case 4:
+	    	 case 3:
 	    		 warlockFrame.setVisible(false);
 	    		 setFrame(warlock2Frame, 3, 1, true);
 	    		 warlock2Frame.add(blade);
@@ -808,19 +828,41 @@ public class AppletRunner extends Applet implements ActionListener{
 	    		 tome.addActionListener(this);
 	    		 warlock2Frame.add(chain);
 	    		 chain.addActionListener(this);
-	    	 }
-	    	 else if(numLevel < 3 && numLevel > 0)
-	    	 {
+	    		 break;
+	    	 case 2:
+	    	 case 1:
 	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.none, numLevel);
 	    		 warlockFrame.setVisible(false);
 	    		 homeFrame.setVisible(true);
+	    		 break;
+	    	default:
+	    		warlockFrame.setVisible(false);
+	    		homeFrame.setVisible(true);
 	    	 }
 	    	 warl = "fiend";
 	     }
 	     else if(evt.getSource() == fey)
 	     {
-	    	 if(numLevel >= 3)
-	    	 {
+	    	 add(test);
+	    	 switch(numLevel) {
+	    	 case 20:
+	    	 case 19:
+	    	 case 18:
+	    	 case 17:
+	    	 case 16:
+	    	 case 15:
+	    	 case 14:
+	    	 case 13:
+	    	 case 12:
+	    	 case 11:
+	    	 case 10:
+	    	 case 9:
+	    	 case 8:
+	    	 case 7:
+	    	 case 6:
+	    	 case 5:
+	    	 case 4:
+	    	 case 3:
 	    		 warlockFrame.setVisible(false);
 	    		 setFrame(warlock2Frame, 3, 1, true);
 	    		 warlock2Frame.add(blade);
@@ -829,33 +871,58 @@ public class AppletRunner extends Applet implements ActionListener{
 	    		 tome.addActionListener(this);
 	    		 warlock2Frame.add(chain);
 	    		 chain.addActionListener(this);
-	    	 }
-	    	 else if(numLevel < 3 && numLevel > 0)
-	    	 {
-	    		 userClass.setClass(archPoss.fey, classPoss.warlock, warlockPact.none, numLevel);
+	    		 break;
+	    	 case 2:
+	    	 case 1:
+	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.none, numLevel);
 	    		 warlockFrame.setVisible(false);
 	    		 homeFrame.setVisible(true);
+	    		 break;
+	    	default:
+	    		warlockFrame.setVisible(false);
+	    		homeFrame.setVisible(true);
 	    	 }
 	    	 warl = "fey";
 	     }
 	     else if(evt.getSource() == gOO)
 	     {
-	    	 if(numLevel >= 3)
-	    	 {
+	    	 switch(numLevel) {
+	    	 case 20:
+	    	 case 19:
+	    	 case 18:
+	    	 case 17:
+	    	 case 16:
+	    	 case 15:
+	    	 case 14:
+	    	 case 13:
+	    	 case 12:
+	    	 case 11:
+	    	 case 10:
+	    	 case 9:
+	    	 case 8:
+	    	 case 7:
+	    	 case 6:
+	    	 case 5:
+	    	 case 4:
+	    	 case 3:
 	    		 warlockFrame.setVisible(false);
-	    		 setFrame(warlock2Frame, 1, 3, true);
+	    		 setFrame(warlock2Frame, 3, 1, true);
 	    		 warlock2Frame.add(blade);
 	    		 blade.addActionListener(this);
 	    		 warlock2Frame.add(tome);
 	    		 tome.addActionListener(this);
 	    		 warlock2Frame.add(chain);
 	    		 chain.addActionListener(this);
-	    	 }
-	    	 else if(numLevel < 3 && numLevel > 0)
-	    	 {
-	    		 userClass.setClass(archPoss.gOO, classPoss.warlock, warlockPact.none, numLevel);
+	    		 break;
+	    	 case 2:
+	    	 case 1:
+	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.none, numLevel);
 	    		 warlockFrame.setVisible(false);
 	    		 homeFrame.setVisible(true);
+	    		 break;
+	    	default:
+	    		warlockFrame.setVisible(false);
+	    		homeFrame.setVisible(true);
 	    	 }
 	    	 warl = "gOO";
 	     }
@@ -923,50 +990,47 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 }
 	     }
 	}
-	public int getLevel() {		
+	public void getLevel() {		
 		if(level == "20")
-			return 20;
+			numLevel = 20;
 		else if(level == "19")
-			return 19;
+			numLevel = 19;
 		else if(level == "18")
-			return 18;
+			numLevel = 18;
 		else if(level == "17")
-			return 17;
+			numLevel = 17;
 		else if(level == "16")
-			return 16;
+			numLevel = 16;
 		else if(level == "15")
-			return 15;
+			numLevel = 15;
 		else if(level == "14")
-			return 14;
+			numLevel = 14;
 		else if(level == "13")
-			return 13;
+			numLevel = 13;
 		else if(level == "12")
-			return 12;
+			numLevel = 12;
 		else if(level == "11")
-			return 11;
+			numLevel = 11;
 		else if(level == "10")
-			return 10;
+			numLevel = 10;
 		else if(level == "9")
-			return 9;
+			numLevel = 9;
 		else if(level == "8")
-			return 8;
+			numLevel = 8;
 		else if(level == "7")
-			return 7;
+			numLevel = 7;
 		else if(level == "6")
-			return 6;
+			numLevel = 6;
 		else if(level == "5")
-			return 5;
+			numLevel = 5;
 		else if(level == "4")
-			return 4;
+			numLevel = 4;
 		else if(level == "3")
-			return 3;
+			numLevel = 3;
 		else if(level == "2")
-			return 2;
-		else if(level == "1")
-			return 1;
+			numLevel = 2;
 		else
-			return 0;
-		
+			numLevel = 1;
 	}
 	
 	
