@@ -12,8 +12,74 @@ public class dndClasses {
 		warlockPact pactType = PactType;
 		int level = lvl;
 		
+		String asi = "increase one ability score by 2 or increase two ability scores by 1 ";
+		String twentyAbt1 = new String();
+		String nineteenAbt1 = new String();
+		String eightteenAbt1 = new String();
+		String seventeenAbt1 = new String();
+		String sixteenAbt1 = new String();
+		String fifthteenAbt1 = new String();
+		String fourteenAbt1 = new String();
+		String thirteenAbt1 = new String();
+		String twelveAbt1 = new String();
+		String elevenAbt1 = new String();
+		String tenAbt1 = new String();
+		String nineAbt1 = new String();
+		String eightAbt1 = new String();
+		String sevenAbt1 = new String();
+		String sixAbt1 = new String();
+		String fiveAbt1 = new String();
+		String fourAbt1 = new String();
+		String threeAbt1 = new String();
+		String twoAbt1 = new String();
+		String oneAbt1 = new String();
+		
+		
 		switch (classType) {
 		case barbarian:
+			switch(level) {
+			case 20:
+				twentyAbt1 = "Strength and Constitution + 4 and maximum cap for those skills increase to 24";
+			case 19:
+				nineteenAbt1 = asi;
+			case 18:
+				eightteenAbt1 = "if your strength check roll is lower than your actual strength score you can use actual score instead";
+			case 17:
+				seventeenAbt1 = "roll three additional weapon damage dice after every crit";
+			case 16:
+				sixteenAbt1 = asi;
+			case 15:
+				fifthteenAbt1 = "";
+			case 14:
+				fourteenAbt1 = "";
+			case 13:
+				thirteenAbt1 = "";
+			case 12:
+				twelveAbt1 = asi;
+			case 11:
+				elevenAbt1 = "";
+			case 10:
+				tenAbt1 = "";
+			case 9:
+				nineAbt1 = "";
+			case 8:
+				eightAbt1 = asi;
+			case 7:
+				sevenAbt1 = "";
+			case 6:
+				sixAbt1 = "";
+			case 5:
+				fiveAbt1 = "";
+			case 4:
+				fourAbt1 = asi;
+			case 3:
+				threeAbt1 = "";
+			case 2:
+				twoAbt1 = "";
+			case 1:
+				oneAbt1 = "";
+				break;
+			}
 			break;
 		case bard:
 			break;
