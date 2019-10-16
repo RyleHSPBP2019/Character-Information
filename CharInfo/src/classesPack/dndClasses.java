@@ -49,7 +49,7 @@ public class dndClasses {
 			case 16:
 				sixteenAbt1 = asi;
 			case 15:
-				fifthteenAbt1 = "";
+				fifthteenAbt1 = "rage is so fierce that it ends early only if you fall unconscious or if you choose to end it";
 			case 14:
 				fourteenAbt1 = "";
 			case 13:
@@ -80,6 +80,16 @@ public class dndClasses {
 				oneAbt1 = "";
 				break;
 			}
+			switch(archType) {
+			
+			case berserker:
+				break;
+			
+			case totem:
+				break;
+			}
+				
+		
 			break;
 		case bard:
 			break;
