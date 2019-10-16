@@ -16,7 +16,6 @@ public class AppletRunner extends Applet implements ActionListener{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	Button test = new Button();
 	//General Initialization
 	Frame homeFrame = new Frame("Homepage");
 	Frame raceFrame = new Frame("Races");
@@ -42,7 +41,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	Races race = new Races();
 	dndClasses userClass = new dndClasses();
 	String level = new String("1");
-	int numLevel = 1;
+	char numLevel = 1;
 	//Dragon Stuff
  	Frame dragonFrame = new Frame("Dragonborn Colors");
  	Button blackD = new Button("Black Dragonborn");
@@ -241,13 +240,13 @@ public class AppletRunner extends Applet implements ActionListener{
 	     else if (evt.getSource()==classButton)
 	     {
 	    	 	homeFrame.setVisible(false);
-	    	 	repaint();
 	    	 	setFrame(levelFrame, 1, 2, true);
 	     }
 	     else if(evt.getSource() == submit)
 	     {
 	    	level = text.getText();
 	    	getLevel();
+	    	repaint();
 	    	levelFrame.setVisible(false);
 	    	classFrame.setVisible(true);
 	     }
@@ -843,7 +842,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == fey)
 	     {
-	    	 add(test);
+	    	 getLevel();
 	    	 switch(numLevel) {
 	    	 case 20:
 	    	 case 19:
@@ -874,7 +873,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	    		 break;
 	    	 case 2:
 	    	 case 1:
-	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.none, numLevel);
+	    		 userClass.setClass(archPoss.fey, classPoss.warlock, warlockPact.none, numLevel);
 	    		 warlockFrame.setVisible(false);
 	    		 homeFrame.setVisible(true);
 	    		 break;
@@ -886,6 +885,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == gOO)
 	     {
+	    	 getLevel();
 	    	 switch(numLevel) {
 	    	 case 20:
 	    	 case 19:
@@ -905,24 +905,25 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 case 5:
 	    	 case 4:
 	    	 case 3:
-	    		 warlockFrame.setVisible(false);
-	    		 setFrame(warlock2Frame, 3, 1, true);
-	    		 warlock2Frame.add(blade);
+	    		 warlockFrame.remove(fiend);
+	    		 warlockFrame.remove(fey);
+	    		 warlockFrame.remove(gOO);
+	    		 warlockFrame.add(blade);
 	    		 blade.addActionListener(this);
-	    		 warlock2Frame.add(tome);
+	    		 warlockFrame.add(tome);
 	    		 tome.addActionListener(this);
-	    		 warlock2Frame.add(chain);
+	    		 warlockFrame.add(chain);
 	    		 chain.addActionListener(this);
+	    		 setFrame(warlockFrame, 3, 1, true);
 	    		 break;
 	    	 case 2:
-	    	 case 1:
-	    		 userClass.setClass(archPoss.fiend, classPoss.warlock, warlockPact.none, numLevel);
+	    		 userClass.setClass(archPoss.gOO, classPoss.warlock, warlockPact.none, numLevel);
 	    		 warlockFrame.setVisible(false);
 	    		 homeFrame.setVisible(true);
 	    		 break;
 	    	default:
 	    		warlockFrame.setVisible(false);
-	    		homeFrame.setVisible(true);
+	    		wizardFrame.setVisible(true);
 	    	 }
 	    	 warl = "gOO";
 	     }
