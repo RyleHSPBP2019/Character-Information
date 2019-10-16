@@ -41,7 +41,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	Races race = new Races();
 	dndClasses userClass = new dndClasses();
 	String level = new String("1");
-	char numLevel = 1;
+	int numLevel = 1;
 	//Dragon Stuff
  	Frame dragonFrame = new Frame("Dragonborn Colors");
  	Button blackD = new Button("Black Dragonborn");
@@ -820,7 +820,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 case 4:
 	    	 case 3:
 	    		 warlockFrame.setVisible(false);
-	    		 setFrame(warlock2Frame, 3, 1, true);
+	    		 setFrame(warlock2Frame, 1, 3, true);
 	    		 warlock2Frame.add(blade);
 	    		 blade.addActionListener(this);
 	    		 warlock2Frame.add(tome);
@@ -863,7 +863,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 case 4:
 	    	 case 3:
 	    		 warlockFrame.setVisible(false);
-	    		 setFrame(warlock2Frame, 3, 1, true);
+	    		 setFrame(warlock2Frame, 1, 3, true);
 	    		 warlock2Frame.add(blade);
 	    		 blade.addActionListener(this);
 	    		 warlock2Frame.add(tome);
@@ -885,8 +885,8 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == gOO)
 	     {
-	    	 getLevel();
-	    	 switch(numLevel) {
+	    	getLevel();
+	    	switch(numLevel) {
 	    	 case 20:
 	    	 case 19:
 	    	 case 18:
@@ -905,18 +905,17 @@ public class AppletRunner extends Applet implements ActionListener{
 	    	 case 5:
 	    	 case 4:
 	    	 case 3:
-	    		 warlockFrame.remove(fiend);
-	    		 warlockFrame.remove(fey);
-	    		 warlockFrame.remove(gOO);
-	    		 warlockFrame.add(blade);
+	    		 warlockFrame.setVisible(false);
+	    		 warlock2Frame.add(blade);
 	    		 blade.addActionListener(this);
-	    		 warlockFrame.add(tome);
+	    		 warlock2Frame.add(tome);
 	    		 tome.addActionListener(this);
-	    		 warlockFrame.add(chain);
+	    		 warlock2Frame.add(chain);
 	    		 chain.addActionListener(this);
-	    		 setFrame(warlockFrame, 3, 1, true);
+	    		 setFrame(warlock2Frame, 1, 3, true);
 	    		 break;
 	    	 case 2:
+	    	 case 1:
 	    		 userClass.setClass(archPoss.gOO, classPoss.warlock, warlockPact.none, numLevel);
 	    		 warlockFrame.setVisible(false);
 	    		 homeFrame.setVisible(true);
@@ -989,48 +988,84 @@ public class AppletRunner extends Applet implements ActionListener{
 	    		 warlock2Frame.setVisible(false);
 	    		 homeFrame.setVisible(true);
 	    	 }
+	    	 //Wizard Stuff
+	    	 else if(evt.getSource() == wizardB)
+	    	 {
+	    		 getLevel();
+	    		 if(numLevel >= 2)
+	    		 {
+	    			 classFrame.setVisible(false);
+	    			 wizardFrame.add(abjuration);
+	    			 abjuration.addActionListener(this);
+	    			 wizardFrame.add(conjuration);
+	    			 conjuration.addActionListener(this);
+	    			 wizardFrame.add(divination);
+	    			 divination.addActionListener(this);
+	    			 wizardFrame.add(enchantment);
+	    			 enchantment.addActionListener(this);
+	    			 wizardFrame.add(evocation);
+	    			 evocation.addActionListener(this);
+	    			 wizardFrame.add(illusion);
+	    			 illusion.addActionListener(this);
+	    			 wizardFrame.add(necromancy);
+	    			 necromancy.addActionListener(this);
+	    			 wizardFrame.add(transmutation);
+	    			 transmutation.addActionListener(this);
+	    			 setFrame(wizardFrame, 2, 4, true);
+	    		 }
+	    		 else
+	    		 {
+	    			 userClass.setClass(archPoss.none, classPoss.wizard, warlockPact.none, numLevel);
+	    			 wizardFrame.setVisible(false);
+	    			 homeFrame.setVisible(true);
+	    		 }
+	    	 }
+	    	 else if(evt.getSource() == abjuration)
+	    	 {
+	    		 userClass.setClass(archPoss.abjuration, classPoss.wizard, warlockPact.none, numLevel);
+	    	 }
 	     }
 	}
 	public void getLevel() {		
-		if(level == "20")
+		if(level.contentEquals("20"))
 			numLevel = 20;
-		else if(level == "19")
+		else if(level.equals("19"))
 			numLevel = 19;
-		else if(level == "18")
+		else if(level.equals("18"))
 			numLevel = 18;
-		else if(level == "17")
+		else if(level.equals("17"))
 			numLevel = 17;
-		else if(level == "16")
+		else if(level.equals("16"))
 			numLevel = 16;
-		else if(level == "15")
+		else if(level.equals("15"))
 			numLevel = 15;
-		else if(level == "14")
+		else if(level.equals("14"))
 			numLevel = 14;
-		else if(level == "13")
+		else if(level.equals("13"))
 			numLevel = 13;
-		else if(level == "12")
+		else if(level.equals("12"))
 			numLevel = 12;
-		else if(level == "11")
+		else if(level.equals("11"))
 			numLevel = 11;
-		else if(level == "10")
+		else if(level.equals("10"))
 			numLevel = 10;
-		else if(level == "9")
+		else if(level.equals("9"))
 			numLevel = 9;
-		else if(level == "8")
+		else if(level.equals("8"))
 			numLevel = 8;
-		else if(level == "7")
+		else if(level.equals("7"))
 			numLevel = 7;
-		else if(level == "6")
+		else if(level.equals("6"))
 			numLevel = 6;
-		else if(level == "5")
+		else if(level.equals("5"))
 			numLevel = 5;
-		else if(level == "4")
+		else if(level.equals("4"))
 			numLevel = 4;
-		else if(level == "3")
+		else if(level.equals("3"))
 			numLevel = 3;
-		else if(level == "2")
+		else if(level.equals("2"))
 			numLevel = 2;
-		else
+		else if(level.equals("1"))
 			numLevel = 1;
 	}
 	

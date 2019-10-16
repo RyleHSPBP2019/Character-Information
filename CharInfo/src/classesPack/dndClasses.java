@@ -6,7 +6,7 @@ public class dndClasses {
 		classPoss classType = classPoss.none;
 		warlockPact pactType = warlockPact.none;
 	}
-	public void setClass(archPoss Archtype, classPoss ClassType, warlockPact PactType, char lvl) {
+	public void setClass(archPoss Archtype, classPoss ClassType, warlockPact PactType, int lvl) {
 		classPoss classType = ClassType;
 		archPoss archType = Archtype;
 		warlockPact pactType = PactType;
