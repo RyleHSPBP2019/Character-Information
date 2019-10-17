@@ -245,7 +245,6 @@ public class AppletRunner extends Applet implements ActionListener{
 	     else if(evt.getSource() == submit)
 	     {
 	    	level = text.getText();
-	    	getLevel();
 	    	repaint();
 	    	levelFrame.setVisible(false);
 	    	classFrame.setVisible(true);
@@ -800,6 +799,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	     }
 	     else if(evt.getSource() == fiend)
 	     {
+	    	 getLevel();
 	    	 switch(numLevel) {
 	    	 case 20:
 	    	 case 19:
@@ -988,43 +988,42 @@ public class AppletRunner extends Applet implements ActionListener{
 	    		 warlock2Frame.setVisible(false);
 	    		 homeFrame.setVisible(true);
 	    	 }
-	    	 //Wizard Stuff
-	    	 else if(evt.getSource() == wizardB)
-	    	 {
-	    		 getLevel();
-	    		 if(numLevel >= 2)
-	    		 {
-	    			 classFrame.setVisible(false);
-	    			 wizardFrame.add(abjuration);
-	    			 abjuration.addActionListener(this);
-	    			 wizardFrame.add(conjuration);
-	    			 conjuration.addActionListener(this);
-	    			 wizardFrame.add(divination);
-	    			 divination.addActionListener(this);
-	    			 wizardFrame.add(enchantment);
-	    			 enchantment.addActionListener(this);
-	    			 wizardFrame.add(evocation);
-	    			 evocation.addActionListener(this);
-	    			 wizardFrame.add(illusion);
-	    			 illusion.addActionListener(this);
-	    			 wizardFrame.add(necromancy);
-	    			 necromancy.addActionListener(this);
-	    			 wizardFrame.add(transmutation);
-	    			 transmutation.addActionListener(this);
-	    			 setFrame(wizardFrame, 2, 4, true);
-	    		 }
-	    		 else
-	    		 {
-	    			 userClass.setClass(archPoss.none, classPoss.wizard, warlockPact.none, numLevel);
-	    			 wizardFrame.setVisible(false);
-	    			 homeFrame.setVisible(true);
-	    		 }
-	    	 }
-	    	 else if(evt.getSource() == abjuration)
-	    	 {
-	    		 userClass.setClass(archPoss.abjuration, classPoss.wizard, warlockPact.none, numLevel);
-	    	 }
 	     }
+	     //Wizard Stuff
+    	 else if(evt.getSource() == wizardB)
+    	 {
+    		 if(numLevel >= 2)
+    		 {
+    			 classFrame.setVisible(false);
+    			 wizardFrame.add(abjuration);
+    			 abjuration.addActionListener(this);
+    			 wizardFrame.add(conjuration);
+    			 conjuration.addActionListener(this);
+    			 wizardFrame.add(divination);
+    			 divination.addActionListener(this);
+    			 wizardFrame.add(enchantment);
+    			 enchantment.addActionListener(this);
+    			 wizardFrame.add(evocation);
+    			 evocation.addActionListener(this);
+    			 wizardFrame.add(illusion);
+    			 illusion.addActionListener(this);
+    			 wizardFrame.add(necromancy);
+    			 necromancy.addActionListener(this);
+    			 wizardFrame.add(transmutation);
+    			 transmutation.addActionListener(this);
+    			 setFrame(wizardFrame, 2, 4, true);
+    		 }
+    		 else
+    		 {
+    			 userClass.setClass(archPoss.none, classPoss.wizard, warlockPact.none, numLevel);
+    			 classFrame.setVisible(false);
+    			 homeFrame.setVisible(true);
+    		 }
+    	 }
+    	 else if(evt.getSource() == abjuration)
+    	 {
+    		 userClass.setClass(archPoss.abjuration, classPoss.wizard, warlockPact.none, numLevel);
+    	 }
 	}
 	public void getLevel() {		
 		if(level.contentEquals("20"))
