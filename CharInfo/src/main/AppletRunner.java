@@ -18,6 +18,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	 */
 	private static final long serialVersionUID = 1L;
 	//General Initialization
+	Frame userFrame = new Frame("Character Info");
 	Frame homeFrame = new Frame("Homepage");
 	Frame raceFrame = new Frame("Races");
 	Frame classFrame = new Frame("Classes");
@@ -38,8 +39,11 @@ public class AppletRunner extends Applet implements ActionListener{
 	Button tieflingB = new Button("Tiefling");
 	//User Stuff
 	Races race = new Races();
+	Races testRace = new Races();
 	dndClasses userClass = new dndClasses();
+	dndClasses testClass = new dndClasses();
 	String level = new String("1");
+	String output = new String("");
 	int numLevel = 1;
 	//Dragon Stuff
  	Frame dragonFrame = new Frame("Dragonborn Colors");
@@ -157,10 +161,9 @@ public class AppletRunner extends Applet implements ActionListener{
  	
  	//Background
  	backgroundButtons b = new backgroundButtons();
- 	backgrounds userB = new backgrounds();
  	public void paint(Graphics g)
  	{
- 		g.drawString(level, 10, 10);
+ 		g.drawString(output, 10, 10);
  	}
 	public AppletRunner() {
 		setFrame(homeFrame, 1, 3, true);
@@ -260,6 +263,14 @@ public class AppletRunner extends Applet implements ActionListener{
 		b.backgroundFrame.add(b.urchin);
 		b.urchin.addActionListener(this);
 		setFrame(b.backgroundFrame, 3, 5, false);
+		
+		
+		//User Frame Stuff
+		if(race != testRace )
+		{
+			output = "test" + "\n";
+			repaint();
+		}
 	}
 	public void setFrame(Frame f, int x, int y, boolean onOff) {
 		f.setLayout(new GridLayout(x, y));
@@ -1202,7 +1213,91 @@ public class AppletRunner extends Applet implements ActionListener{
 	     //Bacground Buttons
     	 else if(evt.getSource() == b.acolyte)
     	 {
-    		 userB.setBackground(backgroundPoss.acolyte);
+    		 b.userB.setBackground(backgroundPoss.acolyte);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.charlatan)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.charlatan);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.criminal)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.criminal);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.entertainer)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.entertainer);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.folkHero)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.folkHero);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.guildArtisan)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.guildArtisan);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.hermit)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.hermit);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.noble)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.noble);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.outlander)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.outlander);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.pirate)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.pirate);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.sage)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.sage);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.sailor)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.sailor);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.soldier)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.soldier);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.spy)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.spy);
+    		 b.backgroundFrame.setVisible(false);
+    		 homeFrame.setVisible(true);
+    	 }
+    	 else if(evt.getSource() == b.urchin)
+    	 {
+    		 b.userB.setBackground(backgroundPoss.urchin);
     		 b.backgroundFrame.setVisible(false);
     		 homeFrame.setVisible(true);
     	 }

@@ -4,6 +4,8 @@ import java.awt.Button;
 import java.awt.Frame;
 
 public class backgroundButtons {
+	public backgrounds testBackgrounds = new backgrounds();
+	public backgrounds userB = new backgrounds();
 	public Frame backgroundFrame = new Frame("Backgrounds");
 	public Button backgroundButton = new Button("Baclgrounds");
 	public Button acolyte = new Button("Acolyte");

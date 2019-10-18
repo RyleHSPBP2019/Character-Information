@@ -1,30 +1,31 @@
 package races;
 
 public class Races {
+	public static racePossible raceType;
+	public static subPossible subType;
+	public String asi= new String();
+	public static String age = new String();
+	public static String align = new String();
+	public static String size = new String();
+	public static String speed = new String();
+	public static String extra = new String();
+	public static String extra2 = new String();
+	public static String extra3 = new String();
+	public static String extra4 = new String();
+	public static String extra5 = new String();
+	public static String extra6 = new String ();
+	public static String languages = new String();
+	public static String cantrips = new String ();
+	public static boolean vision = false;
 		public Races() {
-			racePossible raceType = racePossible.none;
-			subPossible subType = subPossible.nun;
+			raceType = racePossible.none;
+			subType = subPossible.nun;
 		}
 	
 		
 		public void setRaces(racePossible RaceType, subPossible SubType) {
-		racePossible raceType = RaceType;
-		subPossible subType = SubType;
-		String asi= new String();
-		String age = new String();
-		String align = new String();
-		String size = new String();
-		String speed = new String();
-		String extra = new String();
-		String extra2 = new String();
-		String extra3 = new String();
-		String extra4 = new String();
-		String extra5 = new String();
-		String extra6 = new String ();
-		String languages = new String();
-		String cantrips = new String ();
-		
-		boolean vision = false;
+		raceType = RaceType;
+		subType = SubType;
 		
 		//Sets Base Race
 		switch (raceType) {
@@ -107,6 +108,8 @@ public class Races {
 			extra = "You have resistance to fire damage";
 			extra2 = "You know the thaumaturgy cantrip";
 			languages = "You can speak, read, and write Common and Infernal";
+			break;
+		default:
 			break;
 		
 		}
