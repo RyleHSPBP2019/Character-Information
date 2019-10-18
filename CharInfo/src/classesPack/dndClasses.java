@@ -28,10 +28,16 @@ public class dndClasses {
 		String eightAbt1 = new String();
 		String sevenAbt1 = new String();
 		String sixAbt1 = new String();
+		String sixAbt2 = new String();
+		String sixAbt3 = new String();
+		String sixAbt4 = new String ();
 		String fiveAbt1 = new String();
 		String fiveAbt2 = new String();
 		String fourAbt1 = new String();
 		String threeAbt1 = new String();
+		String threeAbt2 = new String();
+		String threeAbt3 = new String();
+		String threeAbt4 = new String();
 		String twoAbt1 = new String();
 		String twoAbt2 = new String();
 		String oneAbt1 = new String();
@@ -40,6 +46,15 @@ public class dndClasses {
 		String feat2 = new String();
 		String feat3 = new String();
 		String feat4 = new String();
+		String bear1 = new String();
+		String bear2 = new String();
+		String bear3 = new String();
+		String eagle1 = new String();
+		String eagle2 = new String();
+		String eagle3 = new String();
+		String wolf1 = new String();
+		String wolf2 = new String();
+		String wolf3 = new String();
 		String proficiencyBonus = new String();
 		
 		switch(level) {
@@ -109,6 +124,9 @@ public class dndClasses {
 				sevenAbt1 = "gain advantage on all initiative rolls";
 			case 6:
 				sixAbt1 = feat2;
+				sixAbt2 = bear2;
+				sixAbt3 = eagle2;
+				sixAbt4 = wolf2;
 			case 5:
 				fiveAbt1 = "you can attack twice";
 				fiveAbt2 = " your speed increases by 10 feet while you aren’t wearing heavy armor";
@@ -116,6 +134,9 @@ public class dndClasses {
 				fourAbt1 = asi;
 			case 3:
 				threeAbt1 = feat;
+				threeAbt2 = bear1;
+				threeAbt3 = eagle1;
+				threeAbt4 = wolf1;
 			case 2:
 				twoAbt1 = "you can throw aside all concern for defense to attack with fierce desperation";
 				twoAbt2 = "you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger";
@@ -135,6 +156,17 @@ public class dndClasses {
 				
 			
 			case totem:
+				feat = "You get to choose a path to follow Bear, Eagle, Wolf";
+				bear1 = "While raging, you have resistance to all damage except psychic damage"; 
+				bear2 = "Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects";
+				bear3 = "";
+				eagle1 = "While you're raging and aren’t wearing heavy armor creatures have disadvantage on opportunity attack rolls against you you can use the Dash action as a bonus action on your turn"; 
+				eagle2 = "You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty";
+				eagle3 = "";
+				wolf1 = "While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you";
+				wolf2 = "You can track other creatures while traveling at a fast pace";
+				wolf3 = "";
+				feat2 = "";
 				break;
 			}
 				
