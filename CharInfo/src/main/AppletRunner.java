@@ -11,6 +11,7 @@ import races.subPossible;
 
 import classesPack.*;
 import backgroundPack.*;
+import outputPackage.*;
 
 public class AppletRunner extends Applet implements ActionListener{
 	/**
@@ -25,8 +26,10 @@ public class AppletRunner extends Applet implements ActionListener{
 	Frame levelFrame = new Frame("Level");
 	TextField text = new TextField("Enter a level please");
 	Button submit = new Button("Submit");
+	Button done = new Button("Done");
 	Button raceButton = new Button("Races");
 	Button classButton = new Button("Classes");
+	lineVars l = new lineVars();
 	//Race Buttons
 	Button dragonbornB = new Button("Dragonborn");
 	Button dwarfB = new Button("Dwarf");
@@ -44,7 +47,6 @@ public class AppletRunner extends Applet implements ActionListener{
 	dndClasses testClass = new dndClasses();
 	
 	String level = new String("1");
-	String output = new String("");
 	int numLevel = 1;
 	//Dragon Stuff
  	Frame dragonFrame = new Frame("Dragonborn Colors");
@@ -164,10 +166,15 @@ public class AppletRunner extends Applet implements ActionListener{
  	backgroundButtons b = new backgroundButtons();
  	public void paint(Graphics g)
  	{
- 		g.drawString(output, 10, 10);
+ 		for(int i = 0; i < 100; i++)
+ 		{
+ 			int x = 10;
+ 			int y = 10 + 15 * i;
+ 			g.drawString(l.line[i], x, y);
+ 		}
  	}
 	public AppletRunner() {
-		setFrame(homeFrame, 1, 3, true);
+		setFrame(homeFrame, 2, 2, true);
 		setFrame(raceFrame, 3, 3, false);
 		setFrame(classFrame, 4, 3, false);
 		setFrame(b.backgroundFrame, 1, 1, false);
@@ -177,6 +184,8 @@ public class AppletRunner extends Applet implements ActionListener{
 		classButton.addActionListener(this);
 		homeFrame.add(b.backgroundButton);
 		b.backgroundButton.addActionListener(this);
+		homeFrame.add(done);
+		done.addActionListener(this);
 		
 		
 		
@@ -267,10 +276,9 @@ public class AppletRunner extends Applet implements ActionListener{
 		
 		
 		//User Frame Stuff
-		if(b.userB.background != backgroundPoss.none && userClass.classType != classPoss.none && Races.raceType != racePossible.none)
+		if((b.userB.background == backgroundPoss.none) && (userClass.classType == classPoss.none) && (race.raceType == racePossible.none))
 		{
-			output = "Race: ";
-			repaint();
+			
 		}
 	}
 	public void setFrame(Frame f, int x, int y, boolean onOff) {
@@ -1301,6 +1309,33 @@ public class AppletRunner extends Applet implements ActionListener{
     		 b.userB.setBackground(backgroundPoss.urchin);
     		 b.backgroundFrame.setVisible(false);
     		 homeFrame.setVisible(true);
+    	 }
+	     //Output Frame Stuff
+    	 else if(evt.getSource() == done)
+    	 {
+    		 String darkV = new String();
+    		 if(Races.vision && Races.subType == subPossible.deep)
+    		 {
+    			 darkV = "120 feet of Darkvision";
+    		 }
+    		 else if(Races.vision)
+    			 darkV = "60 feet of Darkvision";
+    		 else
+    			 darkV = "No Darkvision";
+    		 l.line[0] = "Race: " + Races.archName + Races.name + "\n";
+    		 l.line[1] = "Ability Score Increase: " + Races.asi + "\n";
+    		 l.line[2] = "Age: " + Races.age + "\n";
+    		 l.line[3] = "Alignment: " + Races.align + "\n";
+    		 l.line[4] = "Size: " + Races.size + "\n";
+    		 l.line[5] = "Speed: " + Races.speed + "\n";
+    		 l.line[6] = "Darkvision: " + darkV + "\n";
+    		 l.line[7] = "Languages: " + Races.languages + "\n";
+    		 l.line[8] = "Other: " + Races.extra + " " + Races.extra2 + " " + Races.extra3 + " " + Races.extra4 + " " + Races.extra5;
+    		 l.line[9] = "\n";
+    		 l.line[10] = "Class: ";
+    		 l.line[11] = userClass.threeAbt1;
+    		 
+    		 repaint();
     	 }
 	}
 	public void getLevel() {		

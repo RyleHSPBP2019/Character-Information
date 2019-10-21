@@ -1,9 +1,9 @@
 package races;
 
 public class Races {
-	public static racePossible raceType;
+	public racePossible raceType;
 	public static subPossible subType;
-	public String asi= new String();
+	public static String asi= new String();
 	public static String age = new String();
 	public static String align = new String();
 	public static String size = new String();
@@ -13,10 +13,10 @@ public class Races {
 	public static String extra3 = new String();
 	public static String extra4 = new String();
 	public static String extra5 = new String();
-	public static String extra6 = new String ();
 	public static String languages = new String();
 	public static String cantrips = new String ();
 	public static String name = new String();
+	public static String archName = new String();
 	public static boolean vision = false;
 		public Races() {
 			raceType = racePossible.none;
@@ -31,7 +31,7 @@ public class Races {
 		//Sets Base Race
 		switch (raceType) {
 		case dragonborn:
-			
+			name = "Dragonborn";
 			asi = "Strengh + 1 and Charisma + 2";
 			age = "15-150";
 			align = "Generally Chaotic Evil";
@@ -39,6 +39,7 @@ public class Races {
 			languages = "You can read, speak, and write in common and draconic";
 			break;
 		case dwarf:
+			name = "Dwarf";
 			age = "50-350";
 			align = "Generally Lawful Good";
 			size = "Genreally 4ft - 5ft";
@@ -49,6 +50,7 @@ public class Races {
 			extra2 = "You have proficiency in battleaxes, handaxe, lighhammer. you also have proficiency in artisan's tools such as smith’s tools, brewer’s supplies, or mason’s tools.";
 			extra3 = "You can make a intell(history) check on stonework to see when it was made";		
 		case elf:
+			name = "Elf";
 			age = "100-750";
 			align = "Generally Chaotic Good";
 			size = "Genreally 5ft - 6'5ft";
@@ -57,9 +59,11 @@ public class Races {
 			extra2 = "advantage on saving throws against being charmed, and magic can’t put you to sleep";
 			extra3 = "Elves don’t need to sleep. Instead, they meditate deeply";
 		case gnome:
+			name = "Gnome";
 			extra ="You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic";
 			break;
 		case halfElf:
+			name = "Half Elf";
 			asi = "Charisma + 2 and two other ability scores of your choice increase by 1";
 			age = "20 - 180";
 			align = "Generally True Nertual";
@@ -71,6 +75,7 @@ public class Races {
 			languages = "You can speak, read, and write Common, Elvish, and one extra language of your choice";
 			break;
 		case halfling:
+			name = "Halfling";
 			age = "20 - 200";
 			align = "generally Lawful Good";
 			size = "genereally 3ft tall";
@@ -81,6 +86,7 @@ public class Races {
 			languages = "You can speak, read, and write Common and Halfling";
 			break;
 		case halfOrc:
+			name = "Half Orc";
 			asi = "Strength + 2 and Constitution + 1";
 			age = "14 to 75";
 			align = "Chaotic Neutral";
@@ -93,6 +99,7 @@ public class Races {
 			languages = "You can speak, read, and write Common and Orc";
 			break;
 		case human:
+			name = "Human";
 			asi = "Ability + 1";
 			age = "18 to 100";
 			align = "genereally true neutral";
@@ -101,6 +108,7 @@ public class Races {
 			languages = "You can speak, read, and write Common and one extra language of your choice";
 			break;
 		case tiefling:
+			name = "Tiefling";
 			asi = "Intelligence + 1 and Charisma + 2";
 			age = "18 to 120";
 			align = "genereally Chaotic Evil";
@@ -120,43 +128,52 @@ public class Races {
 		//Dragonborn Subraces
 		case white:
 		case silver:
+			archName = "White or Silver ";
 			extra = "15ft Cone (con. save). Cold Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
 			extra2 ="You are also resistant to Cold damage";
 			break;
 		case green:
+			archName = "Green ";
 			extra = "15ft Cone (con. save). Poison Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
 			extra2 ="You are also resistant to Poison damage";
 			break;
 		case black:
 		case copper:
+			archName = "Black or Copper ";
 			extra = "5 by 30 ft. line (Dex. save). Acid Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
 			extra2 ="You are also resistant to Acid damage";
 			break;
 		case blue:
 		case bronze:
+			archName = "Blue or Bronze ";
 			extra = "5 by 30 ft. line (Dex. save). Lightning Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
 			extra2 ="You are also resistant to Lightning damage";
 			break;
 		case red:
 		case gold:
+			archName = "Red or Gold ";
 			extra = "5 by 30 ft. line (Dex. save). Fire Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
 			extra2 ="You are also resistant to Fire damage";
 			break;
 		case brass:
+			archName = "Brass ";
 			extra = "15ft Cone (con. save). Fire Damage 2d6 damage if failed save. half as much damage on a successful one.damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level";
 			extra2 ="You are also resistant to Fire damage";
 			break;
 		//Dwarf Subraces
 		case hill:
+			archName = "Hill ";
 			 asi = "Constitution + 1 and Wisdom + 1";
 			 extra4 = "Your maximum HP increases by 1 every level";
 			 break;
 		case mountain:
+			archName = "Mountain ";
 			asi = "Constitution + 1 and Strength + 2";
 			extra4 = " proficiency with light and medium armor";
 			break;
 		//Elf Subraces
 		case high:
+			archName = "High ";
 			asi = "Dexterity + 2 and Intelligence + 1";
 			speed = "30ft";
 			extra4 = "Proficiency with the longsword, shortsword, shortbow, and longbow";
@@ -164,6 +181,7 @@ public class Races {
 			languages = "You can read, speak, and write in common and elvish + 1 extra language of your choice";
 			break;
 		case wood:
+			archName = "Wood ";
 			asi = "Dexterity + 2 and Wisdom + 1";
 			speed = "35ft";
 			extra4 = "proficiency with the longsword, shortsword, shortbow, and longbow";
@@ -172,6 +190,7 @@ public class Races {
 			break;
 		//Gnome Subraces
 		case deep:
+			archName = "Deep ";
 			asi = "Intelligence + 2 and Dexterity + 1";
 			align = "Generally Netrual";
 			age = "20 - 250";
@@ -182,6 +201,7 @@ public class Races {
 			languages = "You can read, speak, and write in Common, Gnomish, and Undercommon";
 			break;
 		case rock:
+			archName = "Rock ";
 			asi = "Constitution + 1 and Intelligence + 2";
 			align = "Generally Netrual";
 			age = "40 - 350";
@@ -194,14 +214,17 @@ public class Races {
 			break;
 		//Halflings Subraces
 		case light:
+			archName = "Light ";
 			asi = "Charisma + 1 and Dexterity + 2";
 			extra4 = "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you";
 			break;
 		case stout:
+			archName = "Stout ";
 			asi = "Constitution + 1 and Dexterity + 2";
 			extra4 = "You have advantage on saving throws against poison, and you have resistance against poison damage";
 			break;
 		case nun:
+			archName = "";
 			break;
 		}
 	}

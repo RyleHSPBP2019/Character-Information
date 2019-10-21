@@ -4,6 +4,50 @@ public class dndClasses {
 	public classPoss classType;
 	public archPoss archType;
 	public warlockPact pactType;
+	public String asi = "increase one ability score by 2 or increase two ability scores by 1 ";
+	public String twentyAbt1 = new String();
+	public String nineteenAbt1 = new String();
+	public String eightteenAbt1 = new String();
+	public String seventeenAbt1 = new String();
+	public String sixteenAbt1 = new String();
+	public String fifthteenAbt1 = new String();
+	public String fourteenAbt1 = new String();
+	public String thirteenAbt1 = new String();
+	public String twelveAbt1 = new String();
+	public String elevenAbt1 = new String();
+	public 	String tenAbt1 = new String();
+	public String nineAbt1 = new String();
+	public 	String eightAbt1 = new String();
+	public 	String sevenAbt1 = new String();
+	public 	String sixAbt1 = new String();
+	public 	String sixAbt2 = new String();
+	public 	String sixAbt3 = new String();
+	public 	String sixAbt4 = new String ();
+	public String fiveAbt1 = new String();
+	public 	String fiveAbt2 = new String();
+	public 	String fourAbt1 = new String();
+	public 	String threeAbt1 = new String();
+	public 	String threeAbt2 = new String();
+	public 	String threeAbt3 = new String();
+	public 	String threeAbt4 = new String();
+	public 	String twoAbt1 = new String();
+	public 	String twoAbt2 = new String();
+	public 	String oneAbt1 = new String();
+	public 	String oneAbt2 = new String();
+	public 	String feat = new String();
+	public 	String feat2 = new String();
+	public 	String feat3 = new String();
+	public 	String feat4 = new String();
+	public 	String bear1 = new String();
+	public 	String bear2 = new String();
+	public 	String bear3 = new String();
+	public 	String eagle1 = new String();
+	public 	String eagle2 = new String();
+	public 	String eagle3 = new String();
+	public 	String wolf1 = new String();
+	public 	String wolf2 = new String();
+	public 	String wolf3 = new String();
+	public 	String proficiencyBonus = new String();
 	
 	public dndClasses() {
 		archType = archPoss.none;
@@ -15,51 +59,6 @@ public class dndClasses {
 		archType = Archtype;
 		pactType = PactType;
 		int level = lvl;
-		
-		String asi = "increase one ability score by 2 or increase two ability scores by 1 ";
-		String twentyAbt1 = new String();
-		String nineteenAbt1 = new String();
-		String eightteenAbt1 = new String();
-		String seventeenAbt1 = new String();
-		String sixteenAbt1 = new String();
-		String fifthteenAbt1 = new String();
-		String fourteenAbt1 = new String();
-		String thirteenAbt1 = new String();
-		String twelveAbt1 = new String();
-		String elevenAbt1 = new String();
-		String tenAbt1 = new String();
-		String nineAbt1 = new String();
-		String eightAbt1 = new String();
-		String sevenAbt1 = new String();
-		String sixAbt1 = new String();
-		String sixAbt2 = new String();
-		String sixAbt3 = new String();
-		String sixAbt4 = new String ();
-		String fiveAbt1 = new String();
-		String fiveAbt2 = new String();
-		String fourAbt1 = new String();
-		String threeAbt1 = new String();
-		String threeAbt2 = new String();
-		String threeAbt3 = new String();
-		String threeAbt4 = new String();
-		String twoAbt1 = new String();
-		String twoAbt2 = new String();
-		String oneAbt1 = new String();
-		String oneAbt2 = new String();
-		String feat = new String();
-		String feat2 = new String();
-		String feat3 = new String();
-		String feat4 = new String();
-		String bear1 = new String();
-		String bear2 = new String();
-		String bear3 = new String();
-		String eagle1 = new String();
-		String eagle2 = new String();
-		String eagle3 = new String();
-		String wolf1 = new String();
-		String wolf2 = new String();
-		String wolf3 = new String();
-		String proficiencyBonus = new String();
 		
 		switch(level) {
 		case 1:
@@ -111,7 +110,6 @@ public class dndClasses {
 			case 15:
 				fifthteenAbt1 = "rage is so fierce that it ends early only if you fall unconscious or if you choose to end it";
 			case 14:
-				fourteenAbt1 = feat4;
 			case 13:
 				thirteenAbt1 = "roll two additional weapon damage dice after every crit";
 			case 12:
@@ -119,7 +117,6 @@ public class dndClasses {
 			case 11:
 				elevenAbt1 = "your rage can keep you fighting despite grievous wounds";
 			case 10:
-				tenAbt1 = feat2;
 			case 9:
 				nineAbt1 = "roll one additional weapon damage dice after every crit";
 			case 8:
@@ -127,20 +124,12 @@ public class dndClasses {
 			case 7:
 				sevenAbt1 = "gain advantage on all initiative rolls";
 			case 6:
-				sixAbt1 = feat2;
-				sixAbt2 = bear2;
-				sixAbt3 = eagle2;
-				sixAbt4 = wolf2;
 			case 5:
 				fiveAbt1 = "you can attack twice";
 				fiveAbt2 = " your speed increases by 10 feet while you aren’t wearing heavy armor";
 			case 4:
 				fourAbt1 = asi;
 			case 3:
-				threeAbt1 = feat;
-				threeAbt2 = bear1;
-				threeAbt3 = eagle1;
-				threeAbt4 = wolf1;
 			case 2:
 				twoAbt1 = "you can throw aside all concern for defense to attack with fierce desperation";
 				twoAbt2 = "you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger";
@@ -152,25 +141,18 @@ public class dndClasses {
 			switch(archType) {
 			
 			case berserker:
-				feat = "you can go into a frenzy when you rage, your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one";
-				feat2 = "you can’t be charmed or frightened while raging";
-				feat3 = "you can use your action to frighten someone, choose one creature that you can see within 30 feet.it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn.";
-				feat4 = "when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature";
+				threeAbt1 = "you can go into a frenzy when you rage, your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one";
+				sixAbt1 = "you can’t be charmed or frightened while raging";
+				tenAbt1 = "you can use your action to frighten someone, choose one creature that you can see within 30 feet.it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn.";
+				fourteenAbt1 = "when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature";
 				break;
 				
 			
 			case totem:
-				feat = "You get to choose a path to follow Bear, Eagle, Wolf";
-				bear1 = "While raging, you have resistance to all damage except psychic damage"; 
-				bear2 = "Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects";
-				bear3 = "While you’re raging, any creature within 5 feet of you that’s hostile to you has disadvantage on attack rolls";
-				eagle1 = "While you're raging and aren’t wearing heavy armor creatures have disadvantage on opportunity attack rolls against you you can use the Dash action as a bonus action on your turn"; 
-				eagle2 = "You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty";
-				eagle3 = "While raging, you have a flying speed equal to your current walking speed";
-				wolf1 = "While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you";
-				wolf2 = "You can track other creatures while traveling at a fast pace";
-				wolf3 = "While you’re raging, you can use a bonus action on your turn to knock a Large or sm aller creature prone";
-				feat2 = " you can cast the commune with nature spell but only as a ritual to summon a spirt of the animal you have choosen so either bear, wolf, or eagle";
+				threeAbt1 = "Bear: Resistnt to all damage except psychic while raging. Eagle: If NO heavy armor, disadv. on oppurtunity attacks against you. Wolf: Allies have adv. on melee attacks against creatures within 5 ft of you.";
+				sixAbt1 = "Bear: Carry Capacity doubled, adv. on Str Checks made to interact with objects. Eagle: See up to one mile with no difficulty, dim light doesn't affect you. Wolf: Can track at normal pace.";
+				tenAbt1 = "Can cast Commune with Nature as a ritual only.";
+				fourteenAbt1 = "Bear: While raging, Creatures have Disadv. on attack rolls within 5 ft of you. Eagle: While raging, gain fly speed = walking speed. Wolf: While raging can use bonus action to know Large or smaller creature prone.";
 				break;
 			}
 			break;
