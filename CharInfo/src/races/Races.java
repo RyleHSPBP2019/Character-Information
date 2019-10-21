@@ -16,6 +16,7 @@ public class Races {
 	public static String extra6 = new String ();
 	public static String languages = new String();
 	public static String cantrips = new String ();
+	public static String name = new String();
 	public static boolean vision = false;
 		public Races() {
 			raceType = racePossible.none;
@@ -30,6 +31,7 @@ public class Races {
 		//Sets Base Race
 		switch (raceType) {
 		case dragonborn:
+			
 			asi = "Strengh + 1 and Charisma + 2";
 			age = "15-150";
 			align = "Generally Chaotic Evil";

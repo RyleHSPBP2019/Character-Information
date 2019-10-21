@@ -42,6 +42,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	Races testRace = new Races();
 	dndClasses userClass = new dndClasses();
 	dndClasses testClass = new dndClasses();
+	
 	String level = new String("1");
 	String output = new String("");
 	int numLevel = 1;
@@ -266,9 +267,9 @@ public class AppletRunner extends Applet implements ActionListener{
 		
 		
 		//User Frame Stuff
-		if(race != testRace )
+		if(b.userB.background != backgroundPoss.none && userClass.classType != classPoss.none && Races.raceType != racePossible.none)
 		{
-			output = "test" + "\n";
+			output = "Race: ";
 			repaint();
 		}
 	}

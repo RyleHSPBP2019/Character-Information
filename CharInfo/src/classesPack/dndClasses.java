@@ -1,15 +1,19 @@
 package classesPack;
 
 public class dndClasses {
+	public classPoss classType;
+	public archPoss archType;
+	public warlockPact pactType;
+	
 	public dndClasses() {
-		archPoss archType = archPoss.none;
-		classPoss classType = classPoss.none;
-		warlockPact pactType = warlockPact.none;
+		archType = archPoss.none;
+		classType = classPoss.none;
+		pactType = warlockPact.none;
 	}
 	public void setClass(archPoss Archtype, classPoss ClassType, warlockPact PactType, int lvl) {
-		classPoss classType = ClassType;
-		archPoss archType = Archtype;
-		warlockPact pactType = PactType;
+		classType = ClassType;
+		archType = Archtype;
+		pactType = PactType;
 		int level = lvl;
 		
 		String asi = "increase one ability score by 2 or increase two ability scores by 1 ";

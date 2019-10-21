@@ -1,12 +1,13 @@
 package backgroundPack;
 
 public class backgrounds {
+	public backgroundPoss background;
 	public backgrounds() {
-		backgroundPoss background = backgroundPoss.none;
+		background = backgroundPoss.none;
 		}
 	public void setBackground(backgroundPoss b)
 	{
-		backgroundPoss background = b;
+		background = b;
 		switch(background) {
 		case acolyte:
 			break;
