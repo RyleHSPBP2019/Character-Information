@@ -115,7 +115,7 @@ public class dndClasses {
 			case 11:
 				elevenAbt1 = "your rage can keep you fighting despite grievous wounds";
 			case 10:
-				tenAbt1 = feat3;
+				tenAbt1 = feat2;
 			case 9:
 				nineAbt1 = "roll one additional weapon damage dice after every crit";
 			case 8:
@@ -159,20 +159,20 @@ public class dndClasses {
 				feat = "You get to choose a path to follow Bear, Eagle, Wolf";
 				bear1 = "While raging, you have resistance to all damage except psychic damage"; 
 				bear2 = "Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects";
-				bear3 = "";
+				bear3 = "While you’re raging, any creature within 5 feet of you that’s hostile to you has disadvantage on attack rolls";
 				eagle1 = "While you're raging and aren’t wearing heavy armor creatures have disadvantage on opportunity attack rolls against you you can use the Dash action as a bonus action on your turn"; 
 				eagle2 = "You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty";
-				eagle3 = "";
+				eagle3 = "While raging, you have a flying speed equal to your current walking speed";
 				wolf1 = "While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you";
 				wolf2 = "You can track other creatures while traveling at a fast pace";
-				wolf3 = "";
-				feat2 = "";
+				wolf3 = "While you’re raging, you can use a bonus action on your turn to knock a Large or sm aller creature prone";
+				feat2 = " you can cast the commune with nature spell but only as a ritual to summon a spirt of the animal you have choosen so either bear, wolf, or eagle";
 				break;
 			}
-				
-		
 			break;
+			
 		case bard:
+			
 			break;
 		case cleric:
 			break;
