@@ -48,7 +48,8 @@ public class Races {
 			languages = "You can read, speak, and write in common and dwarvish";
 			extra = "You have advantages on saving rolls against poison, you are also resistance agaisnt poison";
 			extra2 = "You have proficiency in battleaxes, handaxe, lighhammer. you also have proficiency in artisan's tools such as smith’s tools, brewer’s supplies, or mason’s tools.";
-			extra3 = "You can make a intell(history) check on stonework to see when it was made";		
+			extra3 = "You can make a intell(history) check on stonework to see when it was made";	
+			break;
 		case elf:
 			name = "Elf";
 			age = "100-750";
@@ -58,6 +59,7 @@ public class Races {
 			extra = "Proficiency in the Perception skill";
 			extra2 = "advantage on saving throws against being charmed, and magic can’t put you to sleep";
 			extra3 = "Elves don’t need to sleep. Instead, they meditate deeply";
+			break;
 		case gnome:
 			name = "Gnome";
 			extra ="You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic";
@@ -169,7 +171,7 @@ public class Races {
 		case mountain:
 			archName = "Mountain ";
 			asi = "Constitution + 1 and Strength + 2";
-			extra4 = " proficiency with light and medium armor";
+			extra4 = "Proficiency with light and medium armor";
 			break;
 		//Elf Subraces
 		case high:
