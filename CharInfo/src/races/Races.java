@@ -47,7 +47,7 @@ public class Races {
 			vision = true;
 			languages = "You can read, speak, and write in common and dwarvish";
 			extra = "You have advantages on saving rolls against poison, you are also resistance agaisnt poison";
-			extra2 = "You have proficiency in battleaxes, handaxe, lighhammer. you also have proficiency in artisan's tools such as smith’s tools, brewer’s supplies, or mason’s tools.";
+			extra2 = "You have proficiency in battleaxes, handaxe, lighhammer. Choose prof. in mason's, brewer's, or smith's tools.";
 			extra3 = "You can make a intell(history) check on stonework to see when it was made";	
 			break;
 		case elf:
