@@ -69,6 +69,7 @@ public class dndClasses {
 	public 	String oneAbt1 = new String();
 	public 	String oneAbt2 = new String();
 	public  String oneAbt3 = new String();
+	public  String name = new String();
 
 	public 	String proficiencyBonus = new String();
 	
@@ -133,6 +134,7 @@ public class dndClasses {
 			case 15:
 				fifteenAbt1 = "rage is so fierce that it ends early only if you fall unconscious or if you choose to end it";
 			case 14:
+				fourteenAbt1 = fourteenArch;
 			case 13:
 				thirteenAbt1 = "roll two additional weapon damage dice after every crit";
 			case 12:
@@ -140,6 +142,7 @@ public class dndClasses {
 			case 11:
 				elevenAbt1 = "your rage can keep you fighting despite grievous wounds";
 			case 10:
+				tenAbt1 = tenArch;
 			case 9:
 				nineAbt1 = "roll one additional weapon damage dice after every crit";
 			case 8:
@@ -147,6 +150,7 @@ public class dndClasses {
 			case 7:
 				sevenAbt1 = "gain advantage on all initiative rolls";
 			case 6:
+				sixAbt1 = sixArch;
 			case 5:
 				fiveAbt1 = "you can attack twice";
 				fiveAbt2 = " your speed increases by 10 feet while you aren’t wearing heavy armor";
@@ -160,6 +164,7 @@ public class dndClasses {
 			case 1:
 				oneAbt1 = "while i rage You have adv on Strength checks and Strength saving throws, you make a melee weapon attack using Strength, You have resistance to bludgeoning, piercing, and slashing damage";
 				oneAbt2 = "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit";
+				name = "Barbarian";
 				break;
 			}
 			switch(archType) {
