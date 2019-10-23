@@ -31,7 +31,7 @@ public class Races {
 		//Sets Base Race
 		switch (raceType) {
 		case dragonborn:
-			name = "Dragonborn";
+			name = " Dragonborn";
 			asi = "Strengh + 1 and Charisma + 2";
 			age = "15-150";
 			align = "Generally Chaotic Evil";

@@ -169,7 +169,7 @@ public class AppletRunner extends Applet implements ActionListener{
  		for(int i = 0; i < 100; i++)
  		{
  			int x = 5;
- 			int y = 10 + 12 * i;
+ 			int y = 10 + 15 * i;
  			g.drawString(l.line[i], x, y);
  		}
  	}
@@ -1322,6 +1322,7 @@ public class AppletRunner extends Applet implements ActionListener{
     			 darkV = "60 feet of Darkvision";
     		 else
     			 darkV = "No Darkvision";
+    		 
     		 l.line[0] = "Race: " + Races.archName + Races.name + "\n";
     		 l.line[1] = "Ability Score Increase: " + Races.asi + "\n";
     		 l.line[2] = "Age: " + Races.age + "\n";
@@ -1332,8 +1333,14 @@ public class AppletRunner extends Applet implements ActionListener{
     		 l.line[7] = "Languages: " + Races.languages + "\n";
     		 l.line[8] = "Other: " + Races.extra + " " + Races.extra2; 
     		 l.line[9] = Races.extra3 + " " + Races.extra4 + " " + Races.extra5;
-       		 l.line[10] = "Class: " + userClass.name;
-    		 l.line[11] = "Level 1: " + userClass.oneAbt1;
+    		 l.line[10] = "\n";
+       		 l.line[11] = "Class: " + userClass.name;
+       		for(int i = 12; i <= 59; i+=2)
+       		{
+   			 l.line[i] = userClass.abt[i - 12];
+   			 l.line[i + 1] = userClass.abt[i - 11];
+       		}
+    		 /*l.line[11] = "Level 1: " + userClass.oneAbt1;
     		 l.line[12] = userClass.oneAbt2;
     		 l.line[14] = "Level 2: " + userClass.twoAbt1;
     		 l.line[15] = userClass.twoAbt2;
@@ -1372,8 +1379,11 @@ public class AppletRunner extends Applet implements ActionListener{
     		 l.line[65] = "Level 19: " + userClass.nineteenAbt1;
     		 l.line[66] = userClass.nineteenAbt2;
     		 l.line[68] = "Level 20: " + userClass.twentyAbt1;
-    		 l.line[69] = userClass.twentyAbt2; 
-    		 repaint();
+    		 l.line[69] = userClass.twentyAbt2; */
+    		homeFrame.setVisible(false);
+       		userFrame.setSize(500, 500);
+    		userFrame.setVisible(true);
+       		userFrame.repaint();
     	 }
 	}
 	public void getLevel() {		
