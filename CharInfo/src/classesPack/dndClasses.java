@@ -123,66 +123,79 @@ public class dndClasses {
 		case barbarian:
 			switch(level) {
 			case 20:
-				twentyAbt1 = "Strength and Constitution + 4 and maximum cap for those skills increase to 24";
+				abt[39] = "Strength and Constitution + 4 and maximum cap for those skills increase to 24";
+				abt[40] = "";
 			case 19:
-				nineteenAbt1 = asi;
+				abt[37] = asi;
+				abt[38] = "";
 			case 18:
-				eighteenAbt1 = "if your strength check roll is lower than your actual strength score you can use actual score instead";
+				abt[35] = "if your strength check roll is lower than your actual strength score you can use actual score instead";
+				abt[36] = "";
 			case 17:
-				seventeenAbt1 = "roll three additional weapon damage dice after every crit";
+				abt[33] = "roll three additional weapon damage dice after every crit";
+				abt[34] = "";
 			case 16:
-				sixteenAbt1 = asi;
+				abt[31] = asi;
+				abt[32] = "";
 			case 15:
-				fifteenAbt1 = "rage is so fierce that it ends early only if you fall unconscious or if you choose to end it";
+				abt[29] = "rage is so fierce that it ends early only if you fall unconscious or if you choose to end it";
+				abt[30] = "";
 			case 14:
-				fourteenAbt1 = fourteenArch;
+				abt[28] = fourteenArch;
 			case 13:
-				thirteenAbt1 = "roll two additional weapon damage dice after every crit";
+				abt[25] = "roll two additional weapon damage dice after every crit";
+				abt[26] = "";
 			case 12:
-				twelveAbt1 = asi;
+				abt[23] = asi;
+				abt[24] = "";
 			case 11:
-				elevenAbt1 = "your rage can keep you fighting despite grievous wounds";
+				abt[21] = "your rage can keep you fighting despite grievous wounds";
+				abt[22] = "";
 			case 10:
-				tenAbt1 = tenArch;
+				abt[20] = tenArch;
 			case 9:
-				nineAbt1 = "roll one additional weapon damage dice after every crit";
+				abt[17] = "roll one additional weapon damage dice after every crit";
+				abt[18] = "";
 			case 8:
-				eightAbt1 = asi;
+				abt[15] = asi;
+				abt[16] = "";
 			case 7:
-				sevenAbt1 = "gain advantage on all initiative rolls";
+				abt[13] = "gain advantage on all initiative rolls";
+				abt[14]= "";
 			case 6:
-				sixAbt1 = sixArch;
+				abt[12] = "";
 			case 5:
-				fiveAbt1 = "you can attack twice";
-				fiveAbt2 = " your speed increases by 10 feet while you aren’t wearing heavy armor";
+				abt[9] = "you can attack twice";
+				abt[10] = " your speed increases by 10 feet while you aren’t wearing heavy armor";
 			case 4:
-				fourAbt1 = asi;
+				abt[7] = asi;
+				abt[8] = "";
 			case 3:
-				threeAbt1 = threeArch;
+				abt[5] = "";
 			case 2:
 				abt[2] = "you can throw aside all concern for defense to attack with fierce desperation";
 				abt[3] = "you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger";
 			case 1:
-				abt[0] = "while i rage You have adv on Strength checks and Strength saving throws, you make a melee weapon attack using Strength, You have resistance to bludgeoning, piercing, and slashing damage";
-				abt[1] = "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit";
+				abt[0] = "Level 2: while raging You have adv on Strength checks and Strength saving throws, you make a melee weapon attack using Strength, You have resistance to bludgeoning, piercing, and slashing damage";
+				abt[1] = "Level 1: While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit";
 				name = "Barbarian";
 				break;
 			}
 			switch(archType) {
 			
 			case berserker:
-				threeArch = "you can go into a frenzy when you rage, your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one";
-				sixArch = "you can’t be charmed or frightened while raging";
-				tenArch = "you can use your action to frighten someone, choose one creature that you can see within 30 feet.it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn.";
-				fourteenArch = "when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature";
+				abt[4] = "you can go into a frenzy when you rage, your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one";
+				abt[11] = "you can’t be charmed or frightened while raging";
+				abt[19] = "you can use your action to frighten someone, choose one creature that you can see within 30 feet.it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn.";
+				abt[27] = "when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature";
 				break;
 				
 			
 			case totem:
-				threeArch = "Bear: Resistnt to all damage except psychic while raging. Eagle: If NO heavy armor, disadv. on oppurtunity attacks against you. Wolf: Allies have adv. on melee attacks against creatures within 5 ft of you.";
-				sixArch = "Bear: Carry Capacity doubled, adv. on Str Checks made to interact with objects. Eagle: See up to one mile with no difficulty, dim light doesn't affect you. Wolf: Can track at normal pace.";
-				tenArch = "Can cast Commune with Nature as a ritual only.";
-				fourteenArch = "Bear: While raging, Creatures have Disadv. on attack rolls within 5 ft of you. Eagle: While raging, gain fly speed = walking speed. Wolf: While raging can use bonus action to know Large or smaller creature prone.";
+				abt[4] = "Bear: Resistnt to all damage except psychic while raging. Eagle: If NO heavy armor, disadv. on oppurtunity attacks against you. Wolf: Allies have adv. on melee attacks against creatures within 5 ft of you.";
+				abt[11] = "Bear: Carry Capacity doubled, adv. on Str Checks made to interact with objects. Eagle: See up to one mile with no difficulty, dim light doesn't affect you. Wolf: Can track at normal pace.";
+				abt[19] = "Can cast Commune with Nature as a ritual only.";
+				abt[27] = "Bear: While raging, Creatures have Disadv. on attack rolls within 5 ft of you. Eagle: While raging, gain fly speed = walking speed. Wolf: While raging can use bonus action to know Large or smaller creature prone.";
 				break;
 			}
 			break;
