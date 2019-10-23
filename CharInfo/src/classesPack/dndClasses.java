@@ -141,42 +141,42 @@ public class dndClasses {
 				abt[29] = "rage is so fierce that it ends early only if you fall unconscious or if you choose to end it";
 				abt[30] = "";
 			case 14:
-				abt[28] = fourteenArch;
+				abt[28] = "";
 			case 13:
-				abt[25] = "roll two additional weapon damage dice after every crit";
+				abt[25] = "Level 13: roll two additional weapon damage dice after every crit";
 				abt[26] = "";
 			case 12:
 				abt[23] = asi;
 				abt[24] = "";
 			case 11:
-				abt[21] = "your rage can keep you fighting despite grievous wounds";
+				abt[21] = "Level 11: your rage can keep you fighting despite grievous wounds";
 				abt[22] = "";
 			case 10:
 				abt[20] = tenArch;
 			case 9:
-				abt[17] = "roll one additional weapon damage dice after every crit";
+				abt[17] = "Level 9: roll one additional weapon damage dice after every crit";
 				abt[18] = "";
 			case 8:
 				abt[15] = asi;
 				abt[16] = "";
 			case 7:
-				abt[13] = "gain advantage on all initiative rolls";
+				abt[13] = "Level 7: gain advantage on all initiative rolls";
 				abt[14]= "";
 			case 6:
 				abt[12] = "";
 			case 5:
-				abt[9] = "you can attack twice";
-				abt[10] = " your speed increases by 10 feet while you aren’t wearing heavy armor";
+				abt[9] = "Level 5: you can attack twice";
+				abt[10] = "Level 5: your speed increases by 10 feet while you aren’t wearing heavy armor";
 			case 4:
 				abt[7] = asi;
 				abt[8] = "";
 			case 3:
 				abt[5] = "";
 			case 2:
-				abt[2] = "you can throw aside all concern for defense to attack with fierce desperation";
-				abt[3] = "you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger";
+				abt[2] = "Level 2: you can throw aside all concern for defense to attack with fierce desperation";
+				abt[3] = "Level 2: you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger";
 			case 1:
-				abt[0] = "Level 2: while raging You have adv on Strength checks and Strength saving throws, you make a melee weapon attack using Strength, You have resistance to bludgeoning, piercing, and slashing damage";
+				abt[0] = "Level 1: while raging You have adv on Strength checks and Strength saving throws, you make a melee weapon attack using Strength, You have resistance to bludgeoning, piercing, and slashing damage";
 				abt[1] = "Level 1: While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit";
 				name = "Barbarian";
 				break;
@@ -187,7 +187,7 @@ public class dndClasses {
 				abt[4] = "you can go into a frenzy when you rage, your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one";
 				abt[11] = "you can’t be charmed or frightened while raging";
 				abt[19] = "you can use your action to frighten someone, choose one creature that you can see within 30 feet.it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn.";
-				abt[27] = "when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature";
+				abt[27] = "Level 14: when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature";
 				break;
 				
 			
