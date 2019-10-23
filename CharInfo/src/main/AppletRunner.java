@@ -1372,7 +1372,7 @@ public class AppletRunner extends Applet implements ActionListener{
     		 l.line[65] = "Level 19: " + userClass.nineteenAbt1;
     		 l.line[66] = userClass.nineteenAbt2;
     		 l.line[68] = "Level 20: " + userClass.twentyAbt1;
-    		 l.line[69] = userClass.twentyAbt2;
+    		 l.line[69] = userClass.twentyAbt2; 
     		 repaint();
     	 }
 	}

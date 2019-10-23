@@ -70,6 +70,7 @@ public class dndClasses {
 	public 	String oneAbt2 = new String();
 	public  String oneAbt3 = new String();
 	public  String name = new String();
+	public String abt[] = new String[100];
 
 	public 	String proficiencyBonus = new String();
 	
@@ -159,11 +160,11 @@ public class dndClasses {
 			case 3:
 				threeAbt1 = threeArch;
 			case 2:
-				twoAbt1 = "you can throw aside all concern for defense to attack with fierce desperation";
-				twoAbt2 = "you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger";
+				abt[2] = "you can throw aside all concern for defense to attack with fierce desperation";
+				abt[3] = "you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger";
 			case 1:
-				oneAbt1 = "while i rage You have adv on Strength checks and Strength saving throws, you make a melee weapon attack using Strength, You have resistance to bludgeoning, piercing, and slashing damage";
-				oneAbt2 = "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit";
+				abt[0] = "while i rage You have adv on Strength checks and Strength saving throws, you make a melee weapon attack using Strength, You have resistance to bludgeoning, piercing, and slashing damage";
+				abt[1] = "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit";
 				name = "Barbarian";
 				break;
 			}
