@@ -1335,54 +1335,14 @@ public class AppletRunner extends Applet implements ActionListener{
     		 l.line[9] = Races.extra3 + " " + Races.extra4 + " " + Races.extra5;
     		 l.line[10] = "\n";
        		 l.line[11] = "Class: " + userClass.name;
-       		for(int i = 12; i <= 59; i+=2)
+       		for(int i = 0; i < 100; i+=2)
        		{
-   			 l.line[i] = userClass.abt[i - 12];
-   			 l.line[i + 1] = userClass.abt[i - 11];
+       			l.line[i + 12] = userClass.abt[i];
+       			l.line[i + 13] =userClass.abt[i + 1];
        		}
-    		 /*l.line[11] = "Level 1: " + userClass.oneAbt1;
-    		 l.line[12] = userClass.oneAbt2;
-    		 l.line[14] = "Level 2: " + userClass.twoAbt1;
-    		 l.line[15] = userClass.twoAbt2;
-    		 l.line[17] = "Level 3: " + userClass.threeAbt1;
-    		 l.line[18] = userClass.threeAbt2;
-    		 l.line[20] = "Level 4: " + userClass.fourAbt1;
-    		 l.line[21] = userClass.fourAbt2;
-    		 l.line[23] = "Level 5: " + userClass.fiveAbt1;
-    		 l.line[24] = userClass.fiveAbt2;
-    		 l.line[26] = "Level 6: " + userClass.sixAbt1;
-    		 l.line[27] = userClass.sixAbt2;
-    		 l.line[29] = "Level 7: " + userClass.sevenAbt1;
-    		 l.line[30] = userClass.sevenAbt2;
-    		 l.line[32] = "Level 8: " + userClass.eightAbt1;
-    		 l.line[33] = userClass.eightAbt2;
-    		 l.line[35] = "Level 9: " + userClass.nineAbt1;
-    		 l.line[36] = userClass.nineAbt2;
-    		 l.line[38] = "Level 10: " + userClass.tenAbt1;
-    		 l.line[39] = userClass.tenAbt2;
-    		 l.line[41] = "Level 11: " + userClass.elevenAbt1;
-    		 l.line[42] = userClass.elevenAbt2;
-    		 l.line[44] = "Level 12: " + userClass.twelveAbt1;
-    		 l.line[45] = userClass.twelveAbt2;
-    		 l.line[47] = "Level 13: " + userClass.thirteenAbt1;
-    		 l.line[48] = userClass.thirteenAbt2;
-    		 l.line[50] = "Level 14: " +  userClass.fourteenAbt1;
-    		 l.line[51] = userClass.fourteenAbt2;
-    		 l.line[53] = "Level 15: " + userClass.fifteenAbt1;
-    		 l.line[54] = userClass.fifteenAbt2;
-    		 l.line[56] = "Level 16: " + userClass.sixteenAbt1;
-    		 l.line[57] = userClass.sixteenAbt2;
-    		 l.line[59] = "Level 17: " + userClass.seventeenAbt1;
-    		 l.line[60] = userClass.seventeenAbt2;
-    		 l.line[62] = "Level 18: " + userClass.eighteenAbt1;
-    		 l.line[63] = userClass.eighteenAbt2;
-    		 l.line[65] = "Level 19: " + userClass.nineteenAbt1;
-    		 l.line[66] = userClass.nineteenAbt2;
-    		 l.line[68] = "Level 20: " + userClass.twentyAbt1;
-    		 l.line[69] = userClass.twentyAbt2; */
     		homeFrame.setVisible(false);
        		userFrame.setSize(500, 500);
-    		userFrame.setVisible(true);
+    		userFrame.setVisible(false);
        		userFrame.repaint();
        		repaint();
     	 }
