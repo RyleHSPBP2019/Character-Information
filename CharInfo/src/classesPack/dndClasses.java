@@ -196,33 +196,306 @@ public class dndClasses {
 				abt[11] = "Level 6: Bear: Carry Capacity doubled, adv. on Str Checks made to interact with objects. Eagle: See up to one mile with no difficulty, dim light doesn't affect you. Wolf: Can track at normal pace. You also now have 4 rages per day";
 				abt[19] = "level 10: Can cast Commune with Nature as a ritual only.";
 				abt[27] = "Level 14: Bear: While raging, Creatures have Disadv. on attack rolls within 5 ft of you. Eagle: While raging, gain fly speed = walking speed. Wolf: While raging can use bonus action to know Large or smaller creature prone.";
+				break;}
+			break;
+			
+		case bard:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Bard";
 				break;
 			}
 			break;
 			
-		case bard:
-			
-			break;
 		case cleric:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Cleric";
+				break;
+			}
 			break;
+			
 		case druid:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Druid";
+				break;
+			}
 			break;
+			
 		case fighter:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Fighter";
+				break;
+			}
 			break;
+			
 		case monk:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Monk";
+				break;
+			}
 			break;
+			
 		case paladin:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Paladin";
+				break;
+			}
 			break;
+			
 		case ranger:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Ranger";
+				break;
+			}
 			break;
+			
 		case rogue:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Rogue";
+				break;
+			}
 			break;
+			
 		case sorcerer:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Sorcerer";
+				break;
+			}
 			break;
+			
 		case warlock:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Warlock";
+				break;
+			}
 			break;
+			
 		case wizard:
+			switch(level) {
+			case 20:
+			case 19:
+			case 18:
+			case 17:
+			case 16:
+			case 15:
+			case 14:
+			case 13:
+			case 12:
+			case 11:
+			case 10:
+			case 9:
+			case 8:
+			case 7:
+			case 6:
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			name = "Wizard";
+				break;
+			}
 			break;
+			
 		default:
 			break;
 		}
