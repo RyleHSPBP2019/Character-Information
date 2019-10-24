@@ -1384,6 +1384,7 @@ public class AppletRunner extends Applet implements ActionListener{
        		userFrame.setSize(500, 500);
     		userFrame.setVisible(true);
        		userFrame.repaint();
+       		repaint();
     	 }
 	}
 	public void getLevel() {		

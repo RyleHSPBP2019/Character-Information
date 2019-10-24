@@ -173,8 +173,8 @@ public class dndClasses {
 			case 3:
 				abt[5] = "";
 			case 2:
-				abt[2] = "Level 2: you can throw aside all concern for defense to attack with fierce desperation";
-				abt[3] = "Level 2: you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger";
+				abt[2] = "Level 2: you can choose to gain advantage ofr all attacks for your turn, enemies also gain advantage on attacks against you.";
+				abt[3] = "Level 2: you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger.";
 			case 1:
 				abt[0] = "Level 1: while raging You have adv on Strength checks and Strength saving throws, you make a melee weapon attack using Strength, You have resistance to bludgeoning, piercing, and slashing damage";
 				abt[1] = "Level 1: While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit";
