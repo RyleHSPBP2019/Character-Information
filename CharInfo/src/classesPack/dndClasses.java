@@ -121,55 +121,73 @@ public class dndClasses {
 		
 		switch (classType) {
 		case barbarian:
+			switch(archType){
+			case berserker:
+				abt[4] = "Level 3: you can go into a frenzy when you rage, your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one, you have upgraded to 3 rages a day";
+				abt[11] = "Level 6: you can’t be charmed or frightened while raging, you have upgraded to 4 rages a day ";
+				abt[19] = "Level 10: Action to frieghten someone, Wis Save DC(8 + prof + Cha) until end of your next turn.";
+				abt[27] = "Level 14: when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature";
+				break;
+				
+			
+			case totem:
+				abt[4] = "Level 3: Bear: Resistnt to all damage except psychic while raging. Eagle: If NO heavy armor, disadv. on oppurtunity attacks against you. Wolf: Allies have adv. on melee attacks against creatures within 5 ft of you. you've upgraded to 3 rages per day";
+				abt[11] = "Level 6: Bear: Carry Capacity doubled, adv. on Str Checks made to interact with objects. Eagle: See up to one mile with no difficulty, dim light doesn't affect you. Wolf: Can track at normal pace. You also now have 4 rages per day";
+				abt[19] = "Level 10: Can cast Commune with Nature as a ritual only.";
+				abt[27] = "Level 14: Bear: While raging, Creatures have Disadv. on attack rolls within 5 ft of you. Eagle: While raging, gain fly speed = walking speed. Wolf: While raging can use bonus action to know Large or smaller creature prone.";
+				break;
+			default:
+				break;
+			}
 			switch(level) {
 			case 20:
-				abt[39] = "level 20: Strength and Constitution + 4 and maximum cap for those skills increase to 24, you have upgraded to have unlimted rages per day ";
-				abt[40] = "";
+				abt[38] = "Level 20: Strength and Constitution + 4 and maximum cap for those skills increase to 24, you have upgraded to have unlimted rages per day ";
+				abt[39] = "";
 			case 19:
-				abt[37] = asi;
-				abt[38] = "";
+				abt[36] = "Level 19: " + asi;
+				abt[37] = "";
 			case 18:
-				abt[35] = "Level 18: if your strength check roll is lower than your actual strength score you can use actual score instead";
-				abt[36] = "";
+				abt[34] = "Level 18: if your strength check roll is lower than your actual strength score you can use actual score instead";
+				abt[35] = "";
 			case 17:
-				abt[33] = "Level 17: roll three additional weapon damage dice after every crit, you know gain 6 rages per day";
-				abt[34] = "";
+				abt[32] = "Level 17: roll three additional weapon damage dice after every crit, you know gain 6 rages per day";
+				abt[33] = "";
 			case 16:
-				abt[31] = asi;
-				abt[32] = "Level 16: your rage now adds +4 to your attacks";
+				abt[30] = "Level 16: " + asi;
+				abt[31] = "Level 16: your rage now adds +4 to your attacks";
 			case 15:
-				abt[29] = "Level 15: rage is so fierce that it ends early only if you fall unconscious or if you choose to end it";
-				abt[30] = "";
+				abt[28] = "Level 15: rage is so fierce that it ends early only if you fall unconscious or if you choose to end it";
+				abt[29] = "";
 			case 14:
-				abt[28] = "";
-			case 13:
-				abt[25] = "Level 13: roll two additional weapon damage dice after every crit";
 				abt[26] = "";
+			case 13:
+				abt[24] = "Level 13: roll two additional weapon damage dice after every crit";
+				abt[25] = "";
 			case 12:
-				abt[23] = asi;
-				abt[24] = "Level 12: You now have 5 rages per day";
+				abt[22] = "Level 12: " + asi;
+				abt[23] = "Level 12: You now have 5 rages per day";
 			case 11:
-				abt[21] = "Level 11: While your raging if you drop to 0 hp you must make a Con. saving throw DC 10 (+5 number of times you have already used this skill) success 1hp else dead, resets after long rest";
-				abt[22] = "";
+				abt[20] = "Level 11: While your raging if you drop to 0 hp you must make a Con. saving throw DC 10 (+5 number of times you have already used this skill) success 1hp else dead, resets after long rest";
+				abt[21] = "";
 			case 10:
-				abt[20] = "";
-			case 9:
-				abt[17] = "Level 9: roll one additional weapon damage dice after every crit, your rage now adds +3 to your attacks ";
 				abt[18] = "";
+			case 9:
+				abt[16] = "Level 9: roll one additional weapon damage dice after every crit, your rage now adds +3 to your attacks ";
+				abt[17] = "";
 			case 8:
-				abt[15] = asi;
-				abt[16] = "";
+				abt[14] = "Level 8: " + asi;
+				abt[15] = "";
 			case 7:
-				abt[13] = "Level 7: gain advantage on all initiative rolls";
-				abt[14]= "";
+				abt[12] = "Level 7: gain advantage on all initiative rolls";
+				abt[13]= "";
 			case 6:
-				abt[12] = "";
+				abt[10] = "";
 			case 5:
-				abt[9] = "Level 5: you can attack twice";
-				abt[10] = "Level 5: your speed increases by 10 feet while you aren’t wearing heavy armor";
+				abt[8] = "Level 5: you can attack twice";
+				abt[9] = "Level 5: your speed increases by 10 feet while you aren’t wearing heavy armor";
 			case 4:
-				abt[7] = asi;
-				abt[8] = "";
+				abt[6] = "Level 4: " + asi;
+				abt[7] = "";
 			case 3:
 				abt[5] = "";
 			case 2:
@@ -181,24 +199,7 @@ public class dndClasses {
 				name = "Barbarian";
 				break;
 			}
-			switch(archType) {
-			
-			case berserker:
-				abt[4] = "Level 3: you can go into a frenzy when you rage, your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one, you have upgraded to 3 rages a day";
-				abt[11] = "Level 6: you can’t be charmed or frightened while raging, you have upgraded to 4 rages a day ";
-				abt[19] = "Level 10: you can use your action to frighten someone, choose one creature that you can see within 30 feet.it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn.";
-				abt[27] = "Level 14: when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature";
-				break;
-				
-			
-			case totem:
-				abt[4] = "Level 3: Bear: Resistnt to all damage except psychic while raging. Eagle: If NO heavy armor, disadv. on oppurtunity attacks against you. Wolf: Allies have adv. on melee attacks against creatures within 5 ft of you. you've upgraded to 3 rages per day";
-				abt[11] = "Level 6: Bear: Carry Capacity doubled, adv. on Str Checks made to interact with objects. Eagle: See up to one mile with no difficulty, dim light doesn't affect you. Wolf: Can track at normal pace. You also now have 4 rages per day";
-				abt[19] = "level 10: Can cast Commune with Nature as a ritual only.";
-				abt[27] = "Level 14: Bear: While raging, Creatures have Disadv. on attack rolls within 5 ft of you. Eagle: While raging, gain fly speed = walking speed. Wolf: While raging can use bonus action to know Large or smaller creature prone.";
-				break;}
 			break;
-			
 		case bard:
 			switch(level) {
 			case 20:
@@ -212,16 +213,28 @@ public class dndClasses {
 			case 12:
 			case 11:
 			case 10:
+				abt[13] = "Inspiration is now d10. Choose 2 more skills to double prof bonus. Learn 2 spells from any class spell list.";
 			case 9:
+				abt[12] = "Level 9: Level 5 ability is now d8";
 			case 8:
+				abt[11] = "Level 8: " + asi;
 			case 7:
+				abt[10] = "Level 7: Level 4 spell slot.";
 			case 6:
+				abt[8] = "Level 6: As an action you can do a performance to give advantage on saves against charm and fear for allies until end of next turn.";
 			case 5:
+				abt[7] = "Level 5: Regain all expended uses of Inspiration after short or long rest. Insiration die is now d8.";
 			case 4:
+				abt[6] = "Level 4: " + asi;
 			case 3:
+				abt[4] = "Level 3: Choose 2 skills and double your prof bonus.";
 			case 2:
+				abt[2] = "Level 2: Add half your prof bonus to any ability you are NOT proficient in.";
+				abt[3] = "Level 2: During short rest add 1d6 HP to anyone spending hit dice";
 			case 1:
-			name = "Bard";
+				abt[0] = "Level 1: Spellcsting, DC = 8 + prof + CHA, Attack Bonues = + prof + CHA. You can ritual cast. Instruments count as arcane focus.";
+				abt[1] = "Level 1: Give a creature a d6 for their next ability check, attack roll, or saving throw for next 10 min. Not reusable";
+				name = "Bard";
 				break;
 			}
 			break;

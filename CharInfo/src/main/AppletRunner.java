@@ -169,7 +169,7 @@ public class AppletRunner extends Applet implements ActionListener{
  		for(int i = 0; i < 100; i++)
  		{
  			int x = 5;
- 			int y = 10 + 15 * i;
+ 			int y = 10 + 12 * i;
  			g.drawString(l.line[i], x, y);
  		}
  	}
@@ -1313,6 +1313,7 @@ public class AppletRunner extends Applet implements ActionListener{
 	     //Output Frame Stuff
     	 else if(evt.getSource() == done)
     	 {
+    		 homeFrame.setVisible(false);
     		 String darkV = new String();
     		 if(Races.vision && Races.subType == subPossible.deep)
     		 {
@@ -1335,15 +1336,12 @@ public class AppletRunner extends Applet implements ActionListener{
     		 l.line[9] = Races.extra3 + " " + Races.extra4 + " " + Races.extra5;
     		 l.line[10] = "\n";
        		 l.line[11] = "Class: " + userClass.name;
+       		 l.line[12] = "Proficiency: " + userClass.proficiencyBonus;
        		for(int i = 0; i < 100; i+=2)
        		{
-       			l.line[i + 12] = userClass.abt[i];
-       			l.line[i + 13] =userClass.abt[i + 1];
+       			l.line[i + 13] = userClass.abt[i];
+       			l.line[i + 14] =userClass.abt[i + 1];
        		}
-    		homeFrame.setVisible(false);
-       		userFrame.setSize(500, 500);
-    		userFrame.setVisible(false);
-       		userFrame.repaint();
        		repaint();
     	 }
 	}
