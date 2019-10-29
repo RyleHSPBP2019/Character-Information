@@ -273,13 +273,8 @@ public class AppletRunner extends Applet implements ActionListener{
 		b.backgroundFrame.add(b.urchin);
 		b.urchin.addActionListener(this);
 		setFrame(b.backgroundFrame, 3, 5, false);
-		
-		
-		//User Frame Stuff
-		if((b.userB.background == backgroundPoss.none) && (userClass.classType == classPoss.none) && (race.raceType == racePossible.none))
-		{
-			
-		}
+		for(int i = 0; i < 100; i++)
+			l.line[i] = "";
 	}
 	public void setFrame(Frame f, int x, int y, boolean onOff) {
 		f.setLayout(new GridLayout(x, y));
@@ -301,7 +296,6 @@ public class AppletRunner extends Applet implements ActionListener{
 	     else if(evt.getSource() == submit)
 	     {
 	    	level = text.getText();
-	    	repaint();
 	    	levelFrame.setVisible(false);
 	    	classFrame.setVisible(true);
 	     }

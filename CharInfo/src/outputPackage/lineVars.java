@@ -1,5 +1,5 @@
 package outputPackage;
 
 public class lineVars {
-	public String line[] = new String[100];
+	public String line[] = new String[120];
 }
