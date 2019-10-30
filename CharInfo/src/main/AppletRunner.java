@@ -171,6 +171,7 @@ public class AppletRunner extends Applet implements ActionListener{
  			int x = 5;
  			int y = 10 + 12 * i;
  			g.drawString(l.line[i], x, y);
+ 			g.drawString(l.line[16],40,40);
  		}
  	}
 	public AppletRunner() {
@@ -1318,23 +1319,27 @@ public class AppletRunner extends Applet implements ActionListener{
     		 else
     			 darkV = "No Darkvision";
     		 
-    		 l.line[0] = "Race: " + Races.archName + Races.name + "\n";
-    		 l.line[1] = "Ability Score Increase: " + Races.asi + "\n";
-    		 l.line[2] = "Age: " + Races.age + "\n";
-    		 l.line[3] = "Alignment: " + Races.align + "\n";
-    		 l.line[4] = "Size: " + Races.size + "\n";
-    		 l.line[5] = "Speed: " + Races.speed + "\n";
-    		 l.line[6] = "Darkvision: " + darkV + "\n";
-    		 l.line[7] = "Languages: " + Races.languages + "\n";
+    		 l.line[0] = "Race: " + Races.archName + Races.name;
+    		 l.line[1] = "Ability Score Increase: " + Races.asi;
+    		 l.line[2] = "Age: " + Races.age;
+    		 l.line[3] = "Alignment: " + Races.align;
+    		 l.line[4] = "Size: " + Races.size;
+    		 l.line[5] = "Speed: " + Races.speed;
+    		 l.line[6] = "Darkvision: " + darkV;
+    		 l.line[7] = "Languages: " + Races.languages;
     		 l.line[8] = "Other: " + Races.extra + " " + Races.extra2; 
     		 l.line[9] = Races.extra3 + " " + Races.extra4 + " " + Races.extra5;
-    		 l.line[10] = "\n";
+    		 l.line[10] = "";
        		 l.line[11] = "Class: " + userClass.name;
        		 l.line[12] = "Proficiency: " + userClass.proficiencyBonus;
-       		for(int i = 0; i < 100; i+=2)
+       		for(int i = 0; i < 100; i++)
        		{
+       			if(i!=3)
+       			{
        			l.line[i + 13] = userClass.abt[i];
-       			l.line[i + 14] =userClass.abt[i + 1];
+       			}
+       			else
+       				l.line[16] = "test" + userClass.abt[3];
        		}
        		repaint();
     	 }

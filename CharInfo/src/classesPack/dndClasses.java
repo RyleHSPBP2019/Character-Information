@@ -5,70 +5,6 @@ public class dndClasses {
 	public archPoss archType;
 	public warlockPact pactType;
 	public  String asi = "Increase one ability score by 2 or increase two ability scores by 1.";
-	public  String twentyAbt1 = new String();
-	public  String twentyAbt2 = new String();
-	public  String twentyAbt3 = new String();
-	public  String nineteenAbt1 = new String();
-	public  String nineteenAbt2 = new String();
-	public  String nineteenAbt3 = new String();
-	public  String eighteenAbt1 = new String();
-	public  String eighteenAbt2 = new String();
-	public  String eighteenAbt3 = new String();
-	public  String seventeenAbt1 = new String();
-	public  String seventeenAbt2 = new String();
-	public  String seventeenAbt3 = new String();
-	public  String sixteenAbt1 = new String();
-	public  String sixteenAbt2 = new String();
-	public  String sixteenAbt3 = new String();
-	public  String fifteenAbt1 = new String();
-	public  String fifteenAbt2 = new String();
-	public  String fifteenAbt3 = new String();
-	public  String fourteenAbt1 = new String();
-	public  String fourteenAbt2 = new String();
-	public  String fourteenAbt3 = new String();
-	public  String fourteenArch = new String();
-	public  String thirteenAbt1 = new String();
-	public  String thirteenAbt2 = new String();
-	public  String thirteenAbt3 = new String();
-	public  String twelveAbt1 = new String();
-	public  String twelveAbt2 = new String();
-	public  String twelveAbt3 = new String();
-	public  String elevenAbt1 = new String();
-	public  String elevenAbt2 = new String();
-	public  String elevenAbt3 = new String();
-	public 	String tenAbt1 = new String();
-	public 	String tenAbt2 = new String();
-	public 	String tenAbt3 = new String();
-	public 	String tenArch = new String();
-	public  String nineAbt1 = new String();
-	public  String nineAbt2 = new String();
-	public  String nineAbt3 = new String();
-	public 	String eightAbt1 = new String();
-	public 	String eightAbt2 = new String();
-	public 	String eightAbt3 = new String();
-	public 	String sevenAbt1 = new String();
-	public 	String sevenAbt2 = new String();
-	public 	String sevenAbt3 = new String();
-	public 	String sixAbt1 = new String();
-	public 	String sixAbt2 = new String();
-	public 	String sixAbt3 = new String();
-	public  String sixArch = new String();
-	public  String fiveAbt1 = new String();
-	public 	String fiveAbt2 = new String();
-	public 	String fiveAbt3 = new String();
-	public 	String fourAbt1 = new String();
-	public 	String fourAbt2 = new String();
-	public 	String fourAbt3 = new String();
-	public 	String threeAbt1 = new String();
-	public 	String threeAbt2 = new String();
-	public 	String threeAbt3 = new String();	
-	public  String threeArch = new String();
-	public 	String twoAbt1 = new String();
-	public 	String twoAbt2 = new String();
-	public  String twoAbt3 = new String();
-	public 	String oneAbt1 = new String();
-	public 	String oneAbt2 = new String();
-	public  String oneAbt3 = new String();
 	public  String name = new String();
 	public String abt[] = new String[101];
 
@@ -84,7 +20,10 @@ public class dndClasses {
 		archType = Archtype; 
 		pactType = PactType;
 		int level = lvl;
-		
+		for(int i = 0; i < 101; i++)
+		{
+			abt[i] = "";
+		}
 		switch(level) {
 		case 1:
 		case 2:
