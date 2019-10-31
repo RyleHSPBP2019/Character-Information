@@ -1,5 +1,5 @@
 package main;
 
 public class Gloabals {
-	public static String[] ex = new String[100];
+	public static String[] line = new String[500];
 }
